@@ -125,7 +125,6 @@
       #hero .nv-right { gap: calc(var(--u) * 40) !important; }
       #hero .nv-right > button, #hero .nv-right > a { font-size: calc(var(--u) * 19) !important; }
       #hero .nv-right > button svg, #hero .nv-right > a svg { width: calc(var(--u) * 16) !important; height: calc(var(--u) * 16) !important; }
-      #hero .nv-right #nav-search-btn svg { width: calc(var(--u) * 24) !important; height: calc(var(--u) * 24) !important; }
       #hero .nv-right .nv-sel-btn { font-size: calc(var(--u) * 19) !important; gap: calc(var(--u) * 8) !important; }
       #hero .nv-right .nv-sel-btn svg { width: calc(var(--u) * 14) !important; height: calc(var(--u) * 14) !important; }
       #hero .nv-right .nv-sel-menu { border-radius: calc(var(--u) * 20); }
@@ -210,7 +209,6 @@
     }
 
     /* Phone tweaks for the hero */
-    @media (min-width: 1280px) { #hero .nv-right #nav-search-btn { padding: 0 !important; } }
 
     /* Traveller reviews */
     #travellers .tv-card { box-shadow: 0 8px 30px -6px rgba(27,22,72,0.14), 0 2px 8px rgba(27,22,72,0.06); border: 1px solid rgba(27,22,72,0.06); transition: box-shadow .3s ease, transform .3s ease; }
@@ -506,10 +504,6 @@
               <a href="#contact" class="xl:hidden p-2 text-brand-text" aria-label="Your booking">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M2 3h3l2.4 11.2a1.5 1.5 0 001.5 1.2h8.7a1.5 1.5 0 001.5-1.1L21 7H6.2M9.5 20a1 1 0 100 .01M17.5 20a1 1 0 100 .01"/></svg>
               </a>
-              <button id="nav-search-btn" class="block p-2 xl:p-0 text-brand-text hover:text-brand-coral transition-colors" aria-label="Search">
-                <svg class="w-[19px] h-[19px] md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-              </button>
-
 <!-- Currency selector (flag + code) -->
 <div class="nv-sel relative group hidden xl:block">
   <button type="button" class="nv-sel-btn flex items-center gap-2 py-3 text-[18px] min-[1800px]:text-[19px] font-semibold text-brand-text hover:text-brand-coral transition-colors" aria-haspopup="listbox" aria-label="Currency">
@@ -610,7 +604,7 @@
       </div>
 
       <!-- WATCH VIDEO (centered in hero) -->
-      <div class="absolute inset-0 z-20 flex items-center justify-center pt-[110px] md:pt-[220px] pointer-events-none">
+      <div class="absolute inset-0 z-20 flex items-center justify-center pt-[180px] md:pt-[360px] pointer-events-none">
         <a href="https://www.youtube.com/@soulvanabali" target="_blank" rel="noopener noreferrer" aria-label="Watch video on YouTube (opens in a new tab)" class="pointer-events-auto group inline-flex items-center gap-3 md:gap-4 bg-brand-text hover:bg-[#2D2680] text-white font-bold uppercase tracking-[0.08em] text-[14px] md:text-[18px] h-[52px] md:h-[68px] pl-3 md:pl-4 pr-6 md:pr-8 rounded-full shadow-pill hover:shadow-pill-hover hover:-translate-y-0.5 transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-white/70">
           <span class="flex items-center justify-center w-[34px] h-[34px] md:w-[46px] md:h-[46px] rounded-full bg-white shrink-0" aria-hidden="true">
             <svg class="w-4 h-4 md:w-5 md:h-5 ml-0.5" viewBox="0 0 24 24" fill="#1B1648"><path d="M8 5.5v13a1 1 0 001.55.83l10-6.5a1 1 0 000-1.66l-10-6.5A1 1 0 008 5.5z"/></svg>
@@ -646,6 +640,14 @@
         #categories .cat-btn { margin-top: 10px; gap: 10px; height: 38px; padding-left: 14px; padding-right: 5px; font-size: 12.5px; }
         #categories .cat-btn > span { width: 28px; height: 28px; }
         #categories .cat-btn svg { width: 12px; height: 12px; }
+      }
+      /* Keep titles, descriptions and buttons aligned across all cards */
+      @media (max-width: 639px) {
+        #categories .cat-name { font-size: 16px; line-height: 1.25; min-height: 2.5em; width: 100%; display: flex; align-items: flex-end; justify-content: center; text-align: center; overflow-wrap: anywhere; word-break: normal; }
+      }
+      @media (min-width: 640px) {
+        #categories .cat-name { min-height: 2.5em; }
+        #categories .cat-desc { min-height: 5.7em; }
       }
       @media (min-width: 1280px) {
         #categories { padding-top: calc(var(--u) * 90); padding-bottom: calc(var(--u) * 90); }
@@ -691,7 +693,7 @@
           <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=900&q=80" alt="Honeymoon Tour in Bali" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
           <div class="absolute inset-0 bg-gradient-to-t from-[#0B0830]/80 via-[#0B0830]/15 to-transparent"></div>
           <div class="cat-body absolute inset-x-0 bottom-0 p-5 md:p-[38px] pb-6 md:pb-[24px] text-white">
-            <h3 class="cat-name font-serif-cat text-[26px] leading-tight">FAMILY/HONEYMOON PACKAGE</h3>
+            <h3 class="cat-name font-serif-cat text-[26px] leading-tight"><span>FAMILY/<wbr>HONEYMOON PACKAGE</span></h3>
             <p class="cat-desc mt-3 text-[16px] leading-[1.9] text-white/90">Romantic Bali tours designed for unforgettable honeymoon experiences.</p>
             <span class="cat-btn mt-4 inline-flex items-center gap-4 rounded-full bg-[var(--cat-orange)] pl-[18px] pr-[7px] h-[46px] text-[var(--cat-navy)] font-serif-cat text-[15px] tracking-wide uppercase transition-colors group-hover:bg-[var(--cat-orange-hover)]">
               Read more
@@ -700,10 +702,10 @@
           </div>
         </a>
         <a href="#pkg-activities" class="cat-card group relative block overflow-hidden rounded-[14px] aspect-[4/4.8] bg-[var(--cat-navy)]">
-          <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=900&q=80" alt="Activities In Bali" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=900&q=80" alt="ACTIVITIES PACKAGE" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
           <div class="absolute inset-0 bg-gradient-to-t from-[#0B0830]/80 via-[#0B0830]/15 to-transparent"></div>
           <div class="cat-body absolute inset-x-0 bottom-0 p-5 md:p-[38px] pb-6 md:pb-[24px] text-white">
-            <h3 class="cat-name font-serif-cat text-[26px] leading-tight">Activities In Bali</h3>
+            <h3 class="cat-name font-serif-cat text-[26px] leading-tight"><span>ACTIVITIES<br>PACKAGE</span></h3>
             <p class="cat-desc mt-3 text-[16px] leading-[1.9] text-white/90">Top-rated outdoor and cultural activities to enjoy across Bali.</p>
             <span class="cat-btn mt-4 inline-flex items-center gap-4 rounded-full bg-[var(--cat-orange)] pl-[18px] pr-[7px] h-[46px] text-[var(--cat-navy)] font-serif-cat text-[15px] tracking-wide uppercase transition-colors group-hover:bg-[var(--cat-orange-hover)]">
               Read more
@@ -741,6 +743,17 @@
       .pk-sec .pk-price i { font-size:14px; font-weight:400; opacity:.85; margin-left:4px; }
       .pk-sec .pk-more { display:flex; align-items:center; gap:6px; font-weight:600; font-size:15px; }
       .pk-sec .pk-more svg { width:16px; height:16px; }
+      /* Price bar: breathing room + adapts to the width of each card */
+      .pk-sec .pk-bar { gap:14px; container-type:inline-size; }
+      .pk-sec .pk-price { white-space:nowrap; min-width:0; }
+      .pk-sec .pk-price i { margin-left:6px; }
+      .pk-sec .pk-more { white-space:nowrap; flex-shrink:0; }
+      @container (max-width:300px) {
+        .pk-sec .pk-price { font-size:17px; }
+        .pk-sec .pk-price i { font-size:12px; margin-left:5px; }
+        .pk-sec .pk-more { font-size:13px; gap:4px; }
+        .pk-sec .pk-more svg { width:13px; height:13px; }
+      }
       /* Mobile: 2-column compact cards */
       @media (max-width:639px) {
         .pk-sec { padding-left:14px; padding-right:14px; }
@@ -752,13 +765,18 @@
         .pk-sec .pk-pin { width:15px; height:15px; }
         .pk-sec .pk-dur { display:none; }
         .pk-sec .pk-name { margin:8px 0 0 4px; font-size:15px; line-height:1.3; min-height:3.9em; }
-        .pk-sec .pk-bar { margin-top:10px; height:38px; padding:0 12px; }
+        .pk-sec .pk-bar { margin-top:10px; height:38px; padding:0 12px; gap:6px; }
         .pk-sec .pk-price { font-size:12px; white-space:nowrap; }
         .pk-sec .pk-price i { font-size:9px; margin-left:2px; }
         .pk-sec .pk-more { font-size:11.5px; gap:3px; white-space:nowrap; }
         .pk-sec .pk-more svg { width:11px; height:11px; }
       }
-      @media (max-width:389px) { .pk-sec .pk-price i { display:none; } }
+      /* Narrow cards: stack "/ person" under the price so it always stays visible */
+      @container (max-width:250px) {
+        .pk-sec .pk-price { display:flex; flex-direction:column; align-items:flex-start; line-height:1.1; }
+        .pk-sec .pk-price i { display:block; margin-left:0; font-size:10px; opacity:.8; }
+        .pk-sec .pk-more { font-size:12.5px; }
+      }
       @media (min-width:1280px) {
         .pk-sec { padding-top:calc(var(--u)*80); padding-bottom:calc(var(--u)*80); }
         .pk-sec .pk-inner { max-width:calc(var(--u)*1640) !important; }
@@ -915,11 +933,11 @@
     </div>
   </section>
 
-  <!-- ===== PAKET: Activities In Bali ===== -->
+  <!-- ===== PAKET: ACTIVITIES PACKAGE ===== -->
   <section id="pkg-activities" class="pk-sec bg-white px-4 py-14 md:py-20 scroll-mt-6">
     <div class="pk-inner mx-auto max-w-[1640px]">
       <div class="text-center">
-        <p class="pk-eyebrow text-[13px] md:text-[14px] font-bold tracking-[0.22em] uppercase text-[#1B1648]">Activities In Bali</p>
+        <p class="pk-eyebrow text-[13px] md:text-[14px] font-bold tracking-[0.22em] uppercase text-[#1B1648]">ACTIVITIES PACKAGE</p>
         <h2 class="pk-title pk-serif mt-4 text-[30px] md:text-[44px] leading-[1.15] text-[#1B1648]">Top Bali Activities &amp; Experiences</h2>
       </div>
       <div class="pk-grid mt-10 md:mt-12">
@@ -1552,21 +1570,21 @@
     <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=75" aria-hidden="true" tabindex="-1">
       <source src="hh.mp4" type="video/mp4">
     </video>
-    <div class="absolute inset-0 bg-[#1B1648]/60"></div>
+    <div class="absolute inset-0 bg-[#F9A045]/55"></div>
 
     <div class="relative mx-auto max-w-[1500px] grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
       <div class="relative bg-white rounded-[32px] md:rounded-[44px] px-6 py-9 md:px-[70px] md:py-[70px]">
-        <svg class="hidden lg:block absolute -right-8 -top-10 w-[90px] h-[110px] z-10 pointer-events-none" viewBox="0 0 90 110" fill="#fff" stroke="#1B1648" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 58h46l-6 40a8 8 0 0 1-8 7H36a8 8 0 0 1-8-7z"/><path d="M45 58V22M45 28c-8-10-20-8-26-2M45 28c8-10 20-8 26-2M45 36c-10-2-18 4-20 10M45 36c10-2 18 4 20 10"/></svg>
+        <svg class="hidden lg:block absolute -right-8 -top-10 w-[90px] h-[110px] z-10 pointer-events-none" viewBox="0 0 90 110" fill="#fff" stroke="#F9A045" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 58h46l-6 40a8 8 0 0 1-8 7H36a8 8 0 0 1-8-7z"/><path d="M45 58V22M45 28c-8-10-20-8-26-2M45 28c8-10 20-8 26-2M45 36c-10-2-18 4-20 10M45 36c10-2 18 4 20 10"/></svg>
         <h2 class="text-[34px] md:text-[56px] font-extrabold text-brand-text tracking-[-0.04em] leading-[1.05]">Join the Soulvana family!</h2>
         <p class="mt-5 text-brand-muted text-[16px] md:text-[19px] leading-[1.6]">Want more Bali stories in your inbox? Join our mailing list for news, special offers, travel tips and hidden gems.</p>
 
         <form id="nl-form" class="mt-8" novalidate>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input type="email" name="email" required placeholder="Enter your email" aria-label="Email" class="h-[56px] rounded-full bg-white px-6 text-[17px] text-brand-text placeholder:text-brand-text/70 outline-none focus:ring-2 focus:ring-[#1B1648]">
-            <input type="tel" name="phone" placeholder="+62 000000000" aria-label="Phone number" class="h-[56px] rounded-full bg-white px-6 text-[17px] text-brand-text placeholder:text-brand-text/70 outline-none focus:ring-2 focus:ring-[#1B1648]">
+            <input type="email" name="email" required placeholder="Enter your email" aria-label="Email" class="h-[56px] rounded-full bg-white px-6 text-[17px] text-brand-text placeholder:text-brand-text/70 outline-none focus:ring-2 focus:ring-[#F9A045]">
+            <input type="tel" name="phone" placeholder="+62 000000000" aria-label="Phone number" class="h-[56px] rounded-full bg-white px-6 text-[17px] text-brand-text placeholder:text-brand-text/70 outline-none focus:ring-2 focus:ring-[#F9A045]">
           </div>
           <label class="mt-5 flex items-center gap-3 text-[15px] text-brand-text cursor-pointer">
-            <input type="checkbox" name="consent" required class="w-5 h-5 shrink-0 rounded border border-[#1B1648] accent-[#1B1648]">
+            <input type="checkbox" name="consent" required class="w-5 h-5 shrink-0 rounded border border-[#F9A045] accent-[#1B1648]">
             <span>By checking this box you agree to the Soulvana <a href="#" class="underline underline-offset-2 hover:text-brand-coral">Privacy Policy</a></span>
           </label>
           <button type="submit" class="mt-7 w-full h-[56px] rounded-full bg-brand-text hover:bg-[#2D2680] text-white font-bold text-[17px] inline-flex items-center justify-center gap-2 transition-colors">
@@ -1678,7 +1696,6 @@
       // 3. Hero search: scroll to experiences and filter cards by typed keyword
       const searchForm = document.getElementById('hero-search-form');
       const searchInput = document.getElementById('hero-search-input');
-      const navSearchBtn = document.getElementById('nav-search-btn');
       const experienceCards = document.querySelectorAll('.experience-card');
 
       const runSearch = () => {
@@ -1692,12 +1709,6 @@
 
       if (searchForm) {
         searchForm.addEventListener('submit', (e) => { e.preventDefault(); runSearch(); });
-      }
-      if (navSearchBtn && searchInput) {
-        navSearchBtn.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          searchInput.focus();
-        });
       }
 
       // Trip styles carousel
