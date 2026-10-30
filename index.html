@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retreat | SOULVANA — Mindful Bali Retreats</title>
+  <meta name="description" content="Discover Bali through two distinct paths: wild natural adventures and mindful restorative retreats. Authentic, nature-oriented, and small-group journeys in Bali.">
+  <link rel="canonical" href="https://soulvana.com/retreat.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SOULVANA — Different Ways to Experience Bali">
+  <meta property="og:description" content="Explore Bali's waterfalls, mountains, and oceans, or slow down with peaceful wellness retreats. One Soulvana.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80">
+  <meta property="og:url" content="https://soulvana.com/">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Marcellus&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              white: '#FFFFFF',
+              surface: '#FFFFFF',
+              text: '#1B1648',
+              navy: '#F9A045',
+              'navy-light': '#FFB462',
+              coral: '#F9A045',
+              'coral-hover': '#FFB462',
+              'soft-blue': '#FFF1DD',
+              muted: '#5E5B7A',
+              border: '#F0E8DC',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          borderRadius: {
+            'hero': '72px',
+            'hero-mobile': '40px',
+          },
+          boxShadow: {
+            'pill': '0 12px 36px -6px rgba(27, 22, 72, 0.12), 0 4px 12px -2px rgba(27, 22, 72, 0.06)',
+            'pill-hover': '0 20px 45px -8px rgba(27, 22, 72, 0.18), 0 6px 16px -3px rgba(27, 22, 72, 0.08)',
+            'card': '0 4px 20px -2px rgba(27, 22, 72, 0.05)',
+            'card-hover': '0 16px 36px -6px rgba(27, 22, 72, 0.10)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Premium subtle interactions */
+    html {
+      color: #1B1648;
+      background-color: #FFFFFF;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Restrained zoom for hero background */
+    @keyframes subtleKenBurns {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.035); }
+      100% { transform: scale(1); }
+    }
+
+    .animate-hero-bg {
+      animation: subtleKenBurns 38s ease-in-out infinite alternate;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-hero-bg {
+        animation: none;
+      }
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Soft backdrop blur for floating navigation */
+    .nav-glass {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    /* Subtle custom accordion animation */
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+
+    /* Navbar currency flags (round) + dropdown rows */
+    .nv-flag { display: inline-flex; flex-shrink: 0; width: 22px; height: 22px; border-radius: 9999px; overflow: hidden; box-shadow: 0 0 0 1px rgba(27,22,72,.10), 0 1px 2px rgba(0,0,0,.12); }
+    .nv-flag img { display: block; width: 100%; height: 100%; }
+    .nv-flag.nv-flag-lg { width: 30px; height: 30px; }
+    .nv-opt .nv-check { display: none; }
+    .nv-opt[aria-selected="true"] { background: #FFFFFF; }
+    .nv-opt[aria-selected="true"] .nv-check { display: block; }
+    @media (min-width: 1280px) { #navbar-pill .nv-sel-btn .nv-flag { width: calc(var(--u) * 24); height: calc(var(--u) * 24); } }
+
+    /* Hero scales proportionally with viewport width (design reference: 1890px) */
+    :root { --u: clamp(0.66px, calc(100vw / 1890), 1px); }
+    @media (min-width: 1280px) {
+      #hero #navbar-container { top: calc(var(--u) * 40) !important; padding-left: 0; padding-right: 0; }
+      #hero .nv-inner { max-width: calc(var(--u) * 1640) !important; }
+      #hero .nv-logo { top: calc(var(--u) * -25) !important; width: calc(var(--u) * 130) !important; height: calc(var(--u) * 130) !important; }
+      #hero .nv-logo svg { width: calc(var(--u) * 48) !important; height: calc(var(--u) * 48) !important; }
+      #hero .nv-logo span { font-size: calc(var(--u) * 10) !important; }
+      #hero #navbar-pill { margin-left: calc(var(--u) * 65) !important; height: calc(var(--u) * 80) !important; padding-left: calc(var(--u) * 93) !important; padding-right: calc(var(--u) * 20) !important; }
+      #hero .nv-links { gap: calc(var(--u) * 40) !important; font-size: calc(var(--u) * 19) !important; }
+      #hero .nv-links button { gap: calc(var(--u) * 8) !important; }
+      #hero .nv-links svg { width: calc(var(--u) * 14) !important; height: calc(var(--u) * 14) !important; }
+      #hero .nv-right { gap: calc(var(--u) * 40) !important; }
+      #hero .nv-right > button, #hero .nv-right > a { font-size: calc(var(--u) * 19) !important; }
+      #hero .nv-right > button svg, #hero .nv-right > a svg { width: calc(var(--u) * 16) !important; height: calc(var(--u) * 16) !important; }
+      #hero .nv-right #nav-search-btn svg { width: calc(var(--u) * 24) !important; height: calc(var(--u) * 24) !important; }
+      #hero .nv-right .nv-sel-btn { font-size: calc(var(--u) * 19) !important; gap: calc(var(--u) * 8) !important; }
+      #hero .nv-right .nv-sel-btn svg { width: calc(var(--u) * 14) !important; height: calc(var(--u) * 14) !important; }
+      #hero .nv-right .nv-sel-menu { border-radius: calc(var(--u) * 20); }
+      #hero .nv-right span[aria-hidden] { font-size: calc(var(--u) * 22) !important; }
+      #hero .nv-book { height: calc(var(--u) * 50) !important; min-width: calc(var(--u) * 154) !important; padding: 0 calc(var(--u) * 30) !important; }
+      #hero .sb-wrap { top: calc(var(--u) * 199) !important; }
+      #hero #hero-search-form { max-width: calc(var(--u) * 653) !important; height: calc(var(--u) * 89) !important; padding-left: calc(var(--u) * 35) !important; padding-right: calc(var(--u) * 18) !important; gap: calc(var(--u) * 12) !important; }
+      #hero #hero-search-form > span { font-size: calc(var(--u) * 24) !important; }
+      #hero #hero-search-input { font-size: calc(var(--u) * 23) !important; }
+      #hero .sb-btn { width: calc(var(--u) * 167) !important; height: calc(var(--u) * 60) !important; font-size: calc(var(--u) * 22) !important; gap: calc(var(--u) * 10) !important; }
+      #hero .sb-btn svg { width: calc(var(--u) * 22) !important; height: calc(var(--u) * 22) !important; }
+    }
+
+    /* Intro statement scales with viewport like the hero */
+    @media (min-width: 1280px) {
+      #intro { padding-top: 0; padding-bottom: 0; height: calc(var(--u) * 407); display: flex; align-items: center; }
+      #intro .ri-inner { width: 100%; max-width: none; justify-content: center; }
+      #intro .ri-title { font-size: calc(var(--u) * 72); line-height: calc(var(--u) * 78); width: calc(var(--u) * 600); }
+      #intro .ri-case { width: calc(var(--u) * 200); height: calc(var(--u) * 200); margin-left: calc(var(--u) * 38); margin-right: calc(var(--u) * 60); }
+      #intro .ri-copy { width: calc(var(--u) * 730); }
+      #intro .ri-text { font-size: calc(var(--u) * 21); line-height: calc(var(--u) * 32); }
+      #intro .ri-text + .ri-text { margin-top: calc(var(--u) * 20); }
+      #intro .ri-btn { margin-top: calc(var(--u) * 26); height: calc(var(--u) * 60); padding: 0 calc(var(--u) * 30); font-size: calc(var(--u) * 21); }
+    }
+
+    /* Top experiences scales with viewport */
+    @media (min-width: 1280px) {
+      #top-destinations { padding-top: calc(var(--u) * 90); padding-bottom: calc(var(--u) * 90); }
+      #top-destinations .td-inner { max-width: calc(var(--u) * 1640) !important; width: 100%; }
+      #top-destinations .td-left { width: calc(var(--u) * 340); margin-right: calc(var(--u) * 73); }
+      #top-destinations .td-title { font-size: calc(var(--u) * 56); line-height: calc(var(--u) * 62); }
+      #top-destinations .td-text { font-size: calc(var(--u) * 20); line-height: calc(var(--u) * 27); margin-top: calc(var(--u) * 22); }
+      #top-destinations .td-btn { margin-top: calc(var(--u) * 30); height: calc(var(--u) * 60); padding: 0 calc(var(--u) * 30); font-size: calc(var(--u) * 22); }
+      #top-destinations .td-cards { display: flex; gap: calc(var(--u) * 28); }
+      #top-destinations .td-card { flex: 1; }
+      #top-destinations .td-img { height: calc(var(--u) * 300); }
+      #top-destinations .td-body { margin-top: calc(var(--u) * 270); margin-left: calc(var(--u) * 10); margin-right: calc(var(--u) * 10); margin-bottom: calc(var(--u) * 10); padding: calc(var(--u) * 28); border-radius: calc(var(--u) * 34); }
+      #top-destinations .td-card { border-radius: calc(var(--u) * 44); }
+      #top-destinations .td-tag { font-size: calc(var(--u) * 16); padding: calc(var(--u) * 8) calc(var(--u) * 16); }
+      #top-destinations .td-name { font-size: calc(var(--u) * 34); margin-top: calc(var(--u) * 24); }
+      #top-destinations .td-desc { font-size: calc(var(--u) * 20); line-height: calc(var(--u) * 30); margin-top: calc(var(--u) * 10); }
+    }
+
+    /* Top experiences card: pressed / hover state turns the white panel teal */
+    #top-destinations .td-body { transition: background-color .25s ease; }
+    #top-destinations .td-desc { transition: color .25s ease; }
+    #top-destinations .td-tag { background-color: #FFFFFF; }
+    #top-destinations .td-card:hover .td-body,
+    #top-destinations .td-card:active .td-body,
+    #top-destinations .td-card:focus-visible .td-body { background-color: #F9A045; }
+    #top-destinations .td-card:hover .td-desc,
+    #top-destinations .td-card:active .td-desc,
+    #top-destinations .td-card:focus-visible .td-desc { color: #1B1648; }
+    #top-destinations .td-card:focus-visible { outline: 3px solid #F9A045; outline-offset: 3px; }
+
+    /* Popular trip styles */
+    #trip-styles .tp-track::-webkit-scrollbar { display: none; }
+    #trip-styles .tp-card { width: 280px; }
+    @media (min-width: 640px) { #trip-styles .tp-card { width: 340px; } }
+    #trip-styles .tp-body { transition: background-color .25s ease; }
+    #trip-styles .tp-desc { transition: color .25s ease; }
+    #trip-styles .tp-card:hover .tp-body, #trip-styles .tp-card:active .tp-body, #trip-styles .tp-card:focus-visible .tp-body { background-color: #F9A045; }
+    #trip-styles .tp-card:hover .tp-desc, #trip-styles .tp-card:active .tp-desc, #trip-styles .tp-card:focus-visible .tp-desc { color: #1B1648; }
+    #trip-styles .tp-card:focus-visible { outline: 3px solid #F9A045; outline-offset: 3px; }
+    @media (min-width: 1280px) {
+      #trip-styles { padding-top: calc(var(--u) * 65); padding-bottom: calc(var(--u) * 60); }
+      #trip-styles .tp-row { padding-left: max(16px, calc((100vw - var(--u) * 1640) / 2)); }
+      #trip-styles .tp-left { width: calc(var(--u) * 340); margin-right: calc(var(--u) * 73); min-height: calc(var(--u) * 540); }
+      #trip-styles .tp-title { font-size: calc(var(--u) * 56); line-height: calc(var(--u) * 62); }
+      #trip-styles .tp-text { font-size: calc(var(--u) * 20); line-height: calc(var(--u) * 27); margin-top: calc(var(--u) * 22); }
+      #trip-styles .tp-btn { margin-top: calc(var(--u) * 30); height: calc(var(--u) * 60); padding: 0 calc(var(--u) * 30); font-size: calc(var(--u) * 22); }
+      #trip-styles .tp-palm { left: calc(var(--u) * -30); bottom: calc(var(--u) * -40); width: calc(var(--u) * 200); height: calc(var(--u) * 160); }
+      #trip-styles .tp-track { gap: calc(var(--u) * 30); padding-right: calc(var(--u) * 121); }
+      #trip-styles .tp-card { width: calc(var(--u) * 377); border-radius: calc(var(--u) * 44); }
+      #trip-styles .tp-img { height: calc(var(--u) * 260); }
+      #trip-styles .tp-body { margin: calc(var(--u) * 230) calc(var(--u) * 10) calc(var(--u) * 10); padding: calc(var(--u) * 20); border-radius: calc(var(--u) * 34); }
+      #trip-styles .tp-tag { font-size: calc(var(--u) * 17); padding: calc(var(--u) * 7) calc(var(--u) * 16); }
+      #trip-styles .tp-desc { font-size: calc(var(--u) * 21); line-height: calc(var(--u) * 28); margin-top: calc(var(--u) * 22); }
+      #trip-styles .tp-controls { margin-top: calc(var(--u) * 38); padding-right: calc(var(--u) * 121); }
+      #trip-styles .tp-arrow { width: calc(var(--u) * 60); height: calc(var(--u) * 60); }
+      #trip-styles .tp-progress { width: calc(var(--u) * 378); }
+    }
+
+    /* Phone tweaks for the hero */
+    @media (min-width: 1280px) { #hero .nv-right #nav-search-btn { padding: 0 !important; } }
+
+    /* Traveller reviews */
+    #travellers .tv-card { box-shadow: 0 8px 30px -6px rgba(27,22,72,0.14), 0 2px 8px rgba(27,22,72,0.06); border: 1px solid rgba(27,22,72,0.06); transition: box-shadow .3s ease, transform .3s ease; }
+    #travellers .tv-card:hover { box-shadow: 0 18px 44px -8px rgba(27,22,72,0.20), 0 4px 12px rgba(27,22,72,0.08); transform: translateY(-4px); }
+    #travellers .tv-clamp { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; }
+    #travellers .tv-clamp.is-open { -webkit-line-clamp: unset; display: block; }
+    @media (min-width: 1280px) {
+      #travellers { padding-top: calc(var(--u) * 122); padding-bottom: calc(var(--u) * 100); }
+      #travellers .tv-inner { max-width: calc(var(--u) * 1499) !important; }
+      #travellers .tv-cat { top: calc(var(--u) * -93); left: calc(var(--u) * 1328); width: calc(var(--u) * 90); height: calc(var(--u) * 140); }
+      #travellers .tv-title { font-size: calc(var(--u) * 56); }
+      #travellers .tv-sub { font-size: calc(var(--u) * 20); margin-top: calc(var(--u) * 24); max-width: none; }
+      #travellers .tv-grid { margin-top: calc(var(--u) * 106); gap: calc(var(--u) * 25); }
+      #travellers .tv-card { border-radius: calc(var(--u) * 30); padding: calc(var(--u) * 30); min-height: calc(var(--u) * 303); }
+      #travellers .tv-star { width: calc(var(--u) * 24); height: calc(var(--u) * 24); }
+      #travellers .tv-text { font-size: calc(var(--u) * 19); line-height: calc(var(--u) * 26.5); margin-top: calc(var(--u) * 20); }
+      #travellers .tv-more { font-size: calc(var(--u) * 19); }
+      #travellers .tv-avatar { width: calc(var(--u) * 50); height: calc(var(--u) * 50); }
+      #travellers .tv-name { font-size: calc(var(--u) * 19); }
+      #travellers .tv-meta { font-size: calc(var(--u) * 16); }
+    }
+
+    @media (min-width: 1280px) {
+      #travellers .tv-readmore { margin-top: calc(var(--u) * 68); }
+      #travellers .tv-readbtn { height: calc(var(--u) * 60); padding: 0 calc(var(--u) * 30); font-size: calc(var(--u) * 22); min-width: calc(var(--u) * 245); }
+    }
+
+    /* Book with Confidence */
+    /* Soulvana Difference: navy cards */
+    #difference .bc-card { background-color: #1B1648; }
+    #difference .bc-name { color: #FFFFFF; }
+    #difference .bc-text { color: rgba(255,255,255,0.72); }
+    #difference .bc-icon { stroke: #F9A045; }
+    #confidence .bc-icon { width: 70px; height: 70px; }
+    @media (min-width: 1280px) {
+      #confidence { padding-top: calc(var(--u) * 100); padding-bottom: calc(var(--u) * 100); }
+      #confidence .bc-inner { max-width: calc(var(--u) * 1640) !important; }
+      #confidence .bc-title { font-size: calc(var(--u) * 52); }
+      #confidence .bc-grid { margin-top: calc(var(--u) * 84); gap: calc(var(--u) * 40); }
+      #confidence .bc-card { border-radius: calc(var(--u) * 40); padding: calc(var(--u) * 51) calc(var(--u) * 46) calc(var(--u) * 60); min-height: calc(var(--u) * 476); }
+      #confidence .bc-icon { width: calc(var(--u) * 70); height: calc(var(--u) * 70); }
+      #confidence .bc-name { font-size: calc(var(--u) * 32); line-height: calc(var(--u) * 37); margin-top: calc(var(--u) * 28); }
+      #confidence .bc-text { font-size: calc(var(--u) * 20); line-height: calc(var(--u) * 28); margin-top: calc(var(--u) * 18); }
+      #confidence .bc-link { font-size: calc(var(--u) * 22); margin-top: calc(var(--u) * 22); }
+    }
+    /* Why travel with Soulvana */
+    #why-travel .wt-plane { width: 96px; height: 96px; }
+    @media (min-width: 1280px) {
+      #why-travel { padding-top: calc(var(--u) * 70); padding-bottom: calc(var(--u) * 90); }
+      #why-travel .wt-inner { max-width: calc(var(--u) * 1640) !important; }
+      #why-travel .wt-title { font-size: calc(var(--u) * 56); line-height: calc(var(--u) * 62); }
+      #why-travel .wt-text { font-size: calc(var(--u) * 21); line-height: calc(var(--u) * 27); margin-top: calc(var(--u) * 22); max-width: calc(var(--u) * 1000); }
+      #why-travel .wt-plane { width: calc(var(--u) * 100); height: calc(var(--u) * 100); }
+    }
+    /* Why travel: stacking cards */
+    #why-travel .st-stack { margin-top: 40px; }
+    #why-travel .st-card { position: sticky; top: calc(88px + var(--i) * 18px); margin-bottom: 28px; border-radius: 32px; overflow: hidden; transform-origin: 50% 0; will-change: transform; box-shadow: 0 -10px 40px -18px rgba(27,22,72,.18); }
+    #why-travel .st-card:last-child { margin-bottom: 0; }
+    #why-travel .st-grid { display: grid; grid-template-columns: 1fr; }
+    #why-travel .st-img { order: -1; height: 220px; margin: 14px 14px 0; border-radius: 22px; overflow: hidden; }
+    #why-travel .st-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    #why-travel .st-copy { padding: 24px 24px 32px; text-align: left; }
+    #why-travel .st-list { list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+    #why-travel .st-list li { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500; line-height: 1.4; }
+    #why-travel .st-list svg { width: 22px; height: 22px; flex: none; }
+    @media (min-width: 1280px) {
+      #why-travel .st-stack { margin-top: calc(var(--u) * 80); max-width: calc(var(--u) * 1640); margin-left: auto; margin-right: auto; }
+      #why-travel .st-card { top: calc(var(--u) * 120 + var(--i) * var(--u) * 24); margin-bottom: calc(var(--u) * 40); border-radius: calc(var(--u) * 44); }
+      #why-travel .st-grid { grid-template-columns: 1fr calc(var(--u) * 700); height: calc(var(--u) * 620); }
+      #why-travel .st-img { order: 0; height: calc(var(--u) * 540); margin: calc(var(--u) * 40) calc(var(--u) * 40) 0 0; border-radius: calc(var(--u) * 36); align-self: start; }
+      #why-travel .st-copy { padding: calc(var(--u) * 40) calc(var(--u) * 80) calc(var(--u) * 60) calc(var(--u) * 80); display: flex; flex-direction: column; justify-content: center; text-align: left; }
+      #why-travel .st-name { font-size: calc(var(--u) * 56); line-height: calc(var(--u) * 62); }
+      #why-travel .st-text { font-size: calc(var(--u) * 22); line-height: calc(var(--u) * 30); margin-top: calc(var(--u) * 20); max-width: calc(var(--u) * 800); }
+      #why-travel .st-list { margin-top: calc(var(--u) * 28); gap: calc(var(--u) * 12); }
+      #why-travel .st-list li { font-size: calc(var(--u) * 20); gap: calc(var(--u) * 12); }
+      #why-travel .st-list svg { width: calc(var(--u) * 26); height: calc(var(--u) * 26); }
+    }
+    /* On Sale */
+    #on-sale .os-track::-webkit-scrollbar { display: none; }
+    #on-sale .os-card { width: 290px; padding: 8px; border-radius: 36px; background: #FFFFFF; display: flex; flex-direction: column; }
+    #on-sale .os-card { box-shadow: 0 10px 34px -6px rgba(27,22,72,0.16), 0 2px 8px rgba(27,22,72,0.07); border: 1px solid rgba(27,22,72,0.06); transition: box-shadow .3s ease, transform .3s ease; }
+    #on-sale .os-card:hover, #on-sale .os-card:active { box-shadow: 0 20px 48px -8px rgba(27,22,72,0.26), 0 4px 12px rgba(27,22,72,0.10); transform: translateY(-4px); }
+    #on-sale .os-track { padding-top: 12px; padding-bottom: 32px; margin-top: -12px; margin-bottom: -32px; }
+    #on-sale .os-imgwrap { flex-shrink: 0; }
+    #on-sale .os-body { flex: 1; }
+    @media (min-width: 640px) { #on-sale .os-card { width: 360px; } }
+    #on-sale .os-imgwrap { position: relative; height: 230px; border-radius: 28px 28px 0 0; overflow: hidden; }
+    #on-sale .os-imgwrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .7s ease; }
+    #on-sale .os-card:hover .os-imgwrap img { transform: scale(1.05); }
+    #on-sale .os-sale { position: absolute; top: 16px; right: 16px; background: #FFFFFF; border: 1px solid #F9A045; color: #1B1648; font-weight: 700; font-size: 14px; padding: 6px 14px; border-radius: 999px; }
+    #on-sale .os-body { margin-top: -40px; position: relative; background: #fff; border-radius: 28px; padding: 20px; display: flex; flex-direction: column; min-height: 360px; transition: background-color .25s ease; }
+    #on-sale .os-card:hover .os-body, #on-sale .os-card:active .os-body, #on-sale .os-card:focus-visible .os-body { background: #1B1648; }
+    #on-sale .os-card:hover .os-name, #on-sale .os-card:active .os-name, #on-sale .os-card:focus-visible .os-name,
+    #on-sale .os-card:hover .os-meta, #on-sale .os-card:active .os-meta, #on-sale .os-card:focus-visible .os-meta,
+    #on-sale .os-card:hover .os-price, #on-sale .os-card:active .os-price, #on-sale .os-card:focus-visible .os-price { color: #FFFFFF; }
+    #on-sale .os-card:hover .os-desc, #on-sale .os-card:active .os-desc, #on-sale .os-card:focus-visible .os-desc,
+    #on-sale .os-card:hover .os-price span, #on-sale .os-card:active .os-price span, #on-sale .os-card:focus-visible .os-price span { color: rgba(255,255,255,0.72); }
+    #on-sale .os-card:focus-visible { outline: 3px solid #F9A045; outline-offset: 3px; }
+    #on-sale .os-tag { display: inline-flex; align-items: center; gap: 6px; background: #FFFFFF; font-weight: 700; font-size: 14px; padding: 6px 12px; border-radius: 12px; color: #1B1648; }
+    #on-sale .os-meta { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 10px; font-size: 15px; color: #1B1648; }
+    #on-sale .os-old { text-decoration: line-through; color: #8C89A6; font-weight: 500; font-size: 17px; margin-left: 4px; }
+    #on-sale .os-card:hover .os-old, #on-sale .os-card:active .os-old, #on-sale .os-card:focus-visible .os-old { color: rgba(255,255,255,0.6); }
+    @media (min-width: 1280px) {
+      #on-sale { padding-top: calc(var(--u) * 60); padding-bottom: calc(var(--u) * 80); }
+      #on-sale .os-left { width: calc(var(--u) * 340); margin-left: max(16px, calc((100vw - var(--u) * 1640) / 2)); margin-right: calc(var(--u) * 73); }
+      #on-sale .os-title { font-size: calc(var(--u) * 56); line-height: calc(var(--u) * 62); }
+      #on-sale .os-text { font-size: calc(var(--u) * 20); line-height: calc(var(--u) * 27); margin-top: calc(var(--u) * 22); }
+      #on-sale .os-btn { margin-top: calc(var(--u) * 30); height: calc(var(--u) * 60); padding: 0 calc(var(--u) * 30); font-size: calc(var(--u) * 22); }
+      #on-sale .os-track { gap: calc(var(--u) * 30); padding-right: calc(var(--u) * 121); }
+      #on-sale .os-card { width: calc(var(--u) * 378); border-radius: calc(var(--u) * 44); padding: calc(var(--u) * 10); }
+      #on-sale .os-imgwrap { height: calc(var(--u) * 260); border-radius: calc(var(--u) * 36) calc(var(--u) * 36) 0 0; }
+      #on-sale .os-body { min-height: calc(var(--u) * 340); border-radius: calc(var(--u) * 34); padding: calc(var(--u) * 20) calc(var(--u) * 20) calc(var(--u) * 24); margin-top: calc(var(--u) * -50); }
+      #on-sale .os-tag { font-size: calc(var(--u) * 16); padding: calc(var(--u) * 5) calc(var(--u) * 12); }
+      #on-sale .os-name { font-size: calc(var(--u) * 31); margin-top: calc(var(--u) * 14); }
+      #on-sale .os-meta { font-size: calc(var(--u) * 18); margin-top: calc(var(--u) * 8); }
+      #on-sale .os-desc { font-size: calc(var(--u) * 18.5); line-height: calc(var(--u) * 28); margin-top: calc(var(--u) * 14); }
+      #on-sale .os-price { font-size: calc(var(--u) * 17); padding-top: calc(var(--u) * 14); }
+      #on-sale .os-price b { font-size: calc(var(--u) * 25); }
+      #on-sale .os-controls { margin-top: calc(var(--u) * 38); padding-right: calc(var(--u) * 121); }
+      #on-sale .os-arrow { width: calc(var(--u) * 60); height: calc(var(--u) * 60); }
+      #on-sale .os-progress { width: calc(var(--u) * 378); }
+    }
+
+
+    /* Navbar mega panel (Before you go): panel anchors to the pill, rows stay above it */
+    #navbar-pill .nv-links > a, #navbar-pill .nv-links > .group > button, #navbar-pill .nv-links > div:not(.group) { position: relative; z-index: 10; }
+    #navbar-pill .nv-right { position: relative; z-index: 10; }
+    #navbar-pill .bg-panel { z-index: 0; }
+    /* Mega panel cards: allow text to wrap (navbar links are nowrap by default) */
+    #navbar-pill .bg-panel a.nv-card, #navbar-pill .bg-panel a.nv-card * { white-space: normal; }
+    #navbar-pill .bg-panel a.nv-card { min-width: 0; overflow: hidden; }
+      .pin-ic{width:1em;height:1em;flex:none;display:inline-block;vertical-align:-.14em;margin-right:.35em;fill:currentColor}
+    .itb .loc .pin-ic{margin:.2em 0 0;width:1.05em;height:1.05em}
+    .xt-ic .pin-ic{margin:0;vertical-align:-.12em}
+  
+    /* Mobile menu panel */
+    #mobile-menu .mm-row { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 13px 0; font-size: 16px; font-weight: 600; line-height: 1.3; text-align: left; color: #1B1648; transition: color .2s ease; }
+    #mobile-menu .mm-row:hover { color: #F9A045; }
+    #mobile-menu .mm-back { display: flex; align-items: center; gap: 14px; padding: 6px 0 14px; font-size: 16px; font-weight: 600; color: #1B1648; }
+    #mobile-menu [data-mm-view]:not([hidden]) { animation: mmIn .22s ease; }
+    @keyframes mmIn { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
+    body.menu-open { overflow: hidden; }
+    body.menu-open #navbar-pill { box-shadow: none; }
+    @media (prefers-reduced-motion: reduce) { #mobile-menu [data-mm-view]:not([hidden]) { animation: none; } }
+
+    /* Navbar (desktop): pill hugs its content; mega panels stay full size, centred on the pill */
+    @media (min-width: 1280px) {
+      #navbar-container .nv-inner { width: fit-content; max-width: 100%; }
+      #navbar-pill { column-gap: calc(var(--u) * 70); }
+      #navbar-pill .bg-panel { left: 50% !important; right: auto !important; width: calc(var(--u) * 1575); max-width: calc(100vw - 32px); transform: translateX(-50%); }
+    }
+
+    /* Navbar: never wrap or squeeze items onto two lines */
+    #navbar-pill a, #navbar-pill button, #navbar-pill .nv-links > div, #navbar-pill .nv-sel { white-space: nowrap; flex-shrink: 0; }
+    #navbar-pill .nv-links, #navbar-pill .nv-right { flex-wrap: nowrap; }
+    #navbar-pill svg { flex-shrink: 0; }
+  </style>
+</head>
+<body class="font-sans antialiased bg-brand-white text-brand-text selection:bg-brand-soft-blue selection:text-brand-text">
+
+  <header class="relative w-full bg-white pb-0">
+    <div id="hero" class="relative w-full overflow-hidden rounded-b-[36px] md:rounded-b-[110px] bg-white h-[530px] md:h-[100svh] md:min-h-[720px] md:max-h-[900px]">
+
+      <!-- HERO BACKGROUND -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2400&q=85"
+          alt="Cinematic Bali landscape with lush green rice terraces and tropical misty peaks"
+          class="w-full h-full object-cover object-center"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-brand-text/15"></div>
+      </div>
+
+      <!-- NAVBAR: white pill + overlapping round logo -->
+      <div id="navbar-container" class="absolute z-40 inset-x-0 top-[29px] md:top-10 px-[22px] md:px-4">
+        <div class="nv-inner relative max-w-[1640px] mx-auto">
+
+          <!-- Round logo badge (overlaps pill, left) -->
+          <a href="homepage.html" class="nv-logo absolute z-10 left-0 -top-2 md:-top-[25px] w-[73px] h-[73px] md:w-[130px] md:h-[130px] rounded-full bg-white flex items-center justify-center shadow-lg focus:outline-none focus:ring-2 focus:ring-white" aria-label="SOULVANA Bali Home">
+            <img src="logo.webp" alt="Soulvana Bali" class="w-[86%] h-[86%] object-contain">
+          </a>
+
+          <!-- Pill -->
+          <nav id="navbar-pill" class="relative ml-[36px] md:ml-[65px] h-[59px] md:h-[80px] bg-white rounded-full flex items-center justify-between pl-[48px] pr-[18px] md:pl-[93px] md:pr-5 shadow-pill">
+
+            <!-- Desktop links -->
+            <div class="nv-links hidden xl:flex items-center gap-6 2xl:gap-8 min-[1800px]:gap-10 text-[16px] 2xl:text-[18px] min-[1800px]:text-[19px] font-medium text-brand-text">
+              <div class="group">
+                <button class="flex items-center gap-2 py-6 hover:text-[#0B0830] group-hover:text-[#0B0830] group-focus-within:text-[#0B0830] transition-colors">
+                  <span class="group-hover:underline group-focus-within:underline decoration-dotted underline-offset-[6px]">About us</span>
+                  <svg class="w-3.5 h-3.5 text-brand-muted transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <!-- Mega panel: expands the white pill downward -->
+                <div class="bg-panel invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-opacity duration-200 absolute left-0 right-0 top-0 bg-white shadow-pill-hover rounded-[40px] text-brand-text" style="height:calc(var(--u)*480);padding:calc(var(--u)*104) calc(var(--u)*20) 0 calc(var(--u)*110)">
+                  <div class="flex justify-between">
+                    <div class="flex font-semibold" style="gap:calc(var(--u)*150);font-size:calc(var(--u)*21)">
+                      <ul class="flex flex-col" style="gap:calc(var(--u)*26)">
+                        <li><a href="#why-travel" class="hover:text-brand-coral transition-colors">Why Soulvana</a></li>
+                        <li><a href="homepage.html#story" class="hover:text-brand-coral transition-colors">Our Story</a></li>
+                        <li><a href="homepage.html#gallery" class="hover:text-brand-coral transition-colors">Gallery</a></li>
+                        <li><a href="#difference" class="hover:text-brand-coral transition-colors">The Soulvana Difference</a></li>
+                      </ul>
+                      <ul class="flex flex-col" style="gap:calc(var(--u)*26)">
+                        <li><a href="#difference" class="hover:text-brand-coral transition-colors">Book with confidence</a></li>
+                        <li><a href="#travellers" class="hover:text-brand-coral transition-colors">Our reviews</a></li>
+                        <li><a href="#contact" class="hover:text-brand-coral transition-colors">Contact us</a></li>
+                        <li><a href="#contact" class="hover:text-brand-coral transition-colors">Work with us</a></li>
+                      </ul>
+                    </div>
+                    <div class="flex shrink-0" style="gap:calc(var(--u)*30)">
+                    <a href="#why-travel" class="nv-card block shrink-0 bg-white border border-brand-border hover:bg-[#F4F4F7] transition-colors" style="width:calc(var(--u)*290);border-radius:calc(var(--u)*36);padding:calc(var(--u)*8)">
+                      <div class="overflow-hidden" style="height:calc(var(--u)*185);border-radius:calc(var(--u)*30) calc(var(--u)*30) 0 0">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=700&q=80" alt="Rice terraces in Bali" class="w-full h-full object-cover" loading="lazy">
+                      </div>
+                      <div class="relative bg-white" style="margin-top:calc(var(--u)*-34);border-radius:calc(var(--u)*28);padding:calc(var(--u)*16) calc(var(--u)*18)">
+                        <p class="font-semibold leading-tight tracking-[-0.02em]" style="font-size:calc(var(--u)*27)">Responsible travel</p>
+                        <p class="mt-2 text-brand-text font-normal leading-snug" style="font-size:calc(var(--u)*16)">Travel gently with local guides and small groups. Click to find out...</p>
+                      </div>
+                    </a>
+                    <a href="#contact" class="nv-card block shrink-0 bg-white border border-brand-border hover:bg-[#F4F4F7] transition-colors" style="width:calc(var(--u)*290);border-radius:calc(var(--u)*36);padding:calc(var(--u)*8)">
+                      <div class="overflow-hidden" style="height:calc(var(--u)*185);border-radius:calc(var(--u)*30) calc(var(--u)*30) 0 0">
+                        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=700&q=80" alt="Travellers on a Bali trail" class="w-full h-full object-cover" loading="lazy">
+                      </div>
+                      <div class="relative bg-white" style="margin-top:calc(var(--u)*-34);border-radius:calc(var(--u)*28);padding:calc(var(--u)*16) calc(var(--u)*18)">
+                        <p class="font-semibold leading-tight tracking-[-0.02em]" style="font-size:calc(var(--u)*27)">Chat with us</p>
+                        <p class="mt-2 text-brand-text font-normal leading-snug" style="font-size:calc(var(--u)*16)">Our Bali-based team is ready to help you plan your journey!</p>
+                      </div>
+                    </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="group">
+                <button class="flex items-center gap-2 py-6 hover:text-[#0B0830] group-hover:text-[#0B0830] group-focus-within:text-[#0B0830] transition-colors">
+                  <span class="group-hover:underline group-focus-within:underline decoration-dotted underline-offset-[6px]">Before you go</span>
+                  <svg class="w-3.5 h-3.5 text-brand-muted transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <!-- Mega panel: expands the white pill downward -->
+                <div class="bg-panel invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-opacity duration-200 absolute left-0 right-0 top-0 bg-white shadow-pill-hover rounded-[40px] text-brand-text" style="height:calc(var(--u)*480);padding:calc(var(--u)*104) calc(var(--u)*20) 0 calc(var(--u)*110)">
+                  <div class="flex justify-between">
+                    <div class="flex font-semibold" style="gap:calc(var(--u)*110);font-size:calc(var(--u)*21)">
+  <ul class="flex flex-col" style="gap:calc(var(--u)*26)">
+    <li><a href="faq.html" class="hover:text-brand-coral transition-colors">FAQs</a></li>
+    <li><a href="#contact" class="hover:text-brand-coral transition-colors">Travel insurance</a></li>
+    <li><a href="faq.html#preparing" class="hover:text-brand-coral transition-colors">Visa &amp; entry</a></li>
+    <li><a href="faq.html#preparing" class="hover:text-brand-coral transition-colors">What to pack</a></li>
+  </ul>
+  <ul class="flex flex-col" style="gap:calc(var(--u)*26)">
+    <li><a href="#contact" class="hover:text-brand-coral transition-colors">Manage my booking</a></li>
+    <li><a href="#contact" class="hover:text-brand-coral transition-colors">Airport pick-up</a></li>
+    <li><a href="discover.html" class="hover:text-brand-coral transition-colors">Getting around Bali</a></li>
+    <li><a href="discover.html" class="hover:text-brand-coral transition-colors">Best time to visit</a></li>
+  </ul>
+  <ul class="flex flex-col" style="gap:calc(var(--u)*26)">
+    <li><a href="#why-travel" class="hover:text-brand-coral transition-colors">Responsible travel</a></li>
+    <li><a href="#contact" class="hover:text-brand-coral transition-colors">Terms &amp; cancellation</a></li>
+    <li><a href="#contact" class="hover:text-brand-coral transition-colors">Contact us</a></li>
+  </ul>
+</div>
+                    <div class="flex shrink-0" style="gap:calc(var(--u)*24)">
+                    <a href="#contact" class="nv-card block shrink-0 bg-white border border-brand-border hover:bg-[#F4F4F7] transition-colors" style="width:calc(var(--u)*290);border-radius:calc(var(--u)*36);padding:calc(var(--u)*8)">
+                      <div class="overflow-hidden" style="height:calc(var(--u)*185);border-radius:calc(var(--u)*30) calc(var(--u)*30) 0 0">
+                        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=700&q=80" alt="Travellers on a Bali trail" class="w-full h-full object-cover" loading="lazy">
+                      </div>
+                      <div class="relative bg-white" style="margin-top:calc(var(--u)*-34);border-radius:calc(var(--u)*28);padding:calc(var(--u)*16) calc(var(--u)*18)">
+                        <p class="font-semibold leading-tight tracking-[-0.02em]" style="font-size:calc(var(--u)*27)">Manage my booking</p>
+                        <p class="mt-2 text-brand-text font-normal leading-snug" style="font-size:calc(var(--u)*16)">Arrange your pick-up, share essential travel details and more. Click here</p>
+                      </div>
+                    </a>
+                    <a href="discover.html" class="nv-card block shrink-0 bg-white border border-brand-border hover:bg-[#F4F4F7] transition-colors" style="width:calc(var(--u)*290);border-radius:calc(var(--u)*36);padding:calc(var(--u)*8)">
+                      <div class="overflow-hidden" style="height:calc(var(--u)*185);border-radius:calc(var(--u)*30) calc(var(--u)*30) 0 0">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=700&q=80" alt="Rice terraces in Bali" class="w-full h-full object-cover" loading="lazy">
+                      </div>
+                      <div class="relative bg-white" style="margin-top:calc(var(--u)*-34);border-radius:calc(var(--u)*28);padding:calc(var(--u)*16) calc(var(--u)*18)">
+                        <p class="font-semibold leading-tight tracking-[-0.02em]" style="font-size:calc(var(--u)*27)">Best time to visit</p>
+                        <p class="mt-2 text-brand-text font-normal leading-snug" style="font-size:calc(var(--u)*16)">Find the perfect season for your Bali journey. Click here</p>
+                      </div>
+                    </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a href="discover.html" class="hover:text-brand-coral transition-colors">Discover</a>
+              <a href="homepage.html#on-sale" class="hover:text-brand-coral transition-colors">Special offer</a>
+
+            </div>
+
+            <!-- Right cluster -->
+            <div class="nv-right flex items-center gap-3 md:gap-8 min-[1800px]:gap-10 ml-auto">
+              <a href="#contact" class="xl:hidden p-2 text-brand-text" aria-label="Your booking">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M2 3h3l2.4 11.2a1.5 1.5 0 001.5 1.2h8.7a1.5 1.5 0 001.5-1.1L21 7H6.2M9.5 20a1 1 0 100 .01M17.5 20a1 1 0 100 .01"/></svg>
+              </a>
+              <button id="nav-search-btn" class="block p-2 xl:p-0 text-brand-text hover:text-brand-coral transition-colors" aria-label="Search">
+                <svg class="w-[19px] h-[19px] md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              </button>
+
+<!-- Currency selector (flag + code) -->
+<div class="nv-sel relative group hidden xl:block">
+  <button type="button" class="nv-sel-btn flex items-center gap-2 py-3 text-[18px] min-[1800px]:text-[19px] font-semibold text-brand-text hover:text-brand-coral transition-colors" aria-haspopup="listbox" aria-label="Currency">
+    <span class="nv-flag"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Crect%20width='24'%20height='12'%20fill='%23E70011'/%3E%3Crect%20y='12'%20width='24'%20height='12'%20fill='%23fff'/%3E%3C/svg%3E" alt="" width="22" height="22"></span>
+    <span class="nv-sel-label">IDR</span>
+    <svg class="w-3.5 h-3.5 text-brand-muted transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+  </button>
+  <ul role="listbox" class="nv-sel-menu invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all absolute right-0 top-full w-[330px] bg-white rounded-2xl shadow-pill border border-brand-border p-2 text-[15px] font-medium text-brand-text">
+    <li role="presentation" class="px-3 pt-2 pb-1.5 text-[16px] font-semibold text-brand-muted">Currency</li>
+    <li><button type="button" role="option" data-value="IDR" aria-selected="true" class="nv-opt flex w-full items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-brand-surface"><span class="nv-flag nv-flag-lg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Crect%20width='24'%20height='12'%20fill='%23E70011'/%3E%3Crect%20y='12'%20width='24'%20height='12'%20fill='%23fff'/%3E%3C/svg%3E" alt="" width="30" height="30"></span><span class="text-[17px] font-semibold text-brand-text">IDR</span><span class="text-[15px] font-normal text-brand-muted">Indonesian Rupiah</span><svg class="nv-check ml-auto w-5 h-5 text-brand-text shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li><li><button type="button" role="option" data-value="USD" aria-selected="false" class="nv-opt flex w-full items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-brand-surface"><span class="nv-flag nv-flag-lg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Crect%20width='24'%20height='24'%20fill='%23fff'/%3E%3Crect%20y='0.00'%20width='24'%20height='1.85'%20fill='%23B22234'/%3E%3Crect%20y='3.69'%20width='24'%20height='1.85'%20fill='%23B22234'/%3E%3Crect%20y='7.38'%20width='24'%20height='1.85'%20fill='%23B22234'/%3E%3Crect%20y='11.08'%20width='24'%20height='1.85'%20fill='%23B22234'/%3E%3Crect%20y='14.77'%20width='24'%20height='1.85'%20fill='%23B22234'/%3E%3Crect%20y='18.46'%20width='24'%20height='1.85'%20fill='%23B22234'/%3E%3Crect%20y='22.15'%20width='24'%20height='1.85'%20fill='%23B22234'/%3E%3Crect%20width='12.5'%20height='12.92'%20fill='%233C3B6E'/%3E%3Ccircle%20cx='2.0'%20cy='2.2'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='4.8'%20cy='2.2'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='7.6'%20cy='2.2'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='10.4'%20cy='2.2'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='2.0'%20cy='5.8'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='4.8'%20cy='5.8'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='7.6'%20cy='5.8'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='10.4'%20cy='5.8'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='2.0'%20cy='9.4'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='4.8'%20cy='9.4'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='7.6'%20cy='9.4'%20r='.6'%20fill='%23fff'/%3E%3Ccircle%20cx='10.4'%20cy='9.4'%20r='.6'%20fill='%23fff'/%3E%3C/svg%3E" alt="" width="30" height="30"></span><span class="text-[17px] font-semibold text-brand-text">USD</span><span class="text-[15px] font-normal text-brand-muted">US Dollar</span><svg class="nv-check ml-auto w-5 h-5 text-brand-text shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li><li><button type="button" role="option" data-value="EUR" aria-selected="false" class="nv-opt flex w-full items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-brand-surface"><span class="nv-flag nv-flag-lg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Crect%20width='24'%20height='24'%20fill='%23003399'/%3E%3Ccircle%20cx='12.00'%20cy='4.80'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='15.60'%20cy='5.76'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='18.24'%20cy='8.40'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='19.20'%20cy='12.00'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='18.24'%20cy='15.60'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='15.60'%20cy='18.24'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='12.00'%20cy='19.20'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='8.40'%20cy='18.24'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='5.76'%20cy='15.60'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='4.80'%20cy='12.00'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='5.76'%20cy='8.40'%20r='.95'%20fill='%23FFCC00'/%3E%3Ccircle%20cx='8.40'%20cy='5.76'%20r='.95'%20fill='%23FFCC00'/%3E%3C/svg%3E" alt="" width="30" height="30"></span><span class="text-[17px] font-semibold text-brand-text">EUR</span><span class="text-[15px] font-normal text-brand-muted">Euro</span><svg class="nv-check ml-auto w-5 h-5 text-brand-text shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li><li><button type="button" role="option" data-value="AUD" aria-selected="false" class="nv-opt flex w-full items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-brand-surface"><span class="nv-flag nv-flag-lg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Crect%20width='24'%20height='24'%20fill='%2300247D'/%3E%3Cpath%20d='M0%200L12%2012M12%200L0%2012'%20stroke='%23fff'%20stroke-width='2.4'/%3E%3Cpath%20d='M0%200L12%2012M12%200L0%2012'%20stroke='%23CF142B'%20stroke-width='.8'/%3E%3Cpath%20d='M6%200V12M0%206H12'%20stroke='%23fff'%20stroke-width='4'/%3E%3Cpath%20d='M6%200V12M0%206H12'%20stroke='%23CF142B'%20stroke-width='2.4'/%3E%3Ccircle%20cx='6'%20cy='19'%20r='2.1'%20fill='%23fff'/%3E%3Ccircle%20cx='17'%20cy='5'%20r='1'%20fill='%23fff'/%3E%3Ccircle%20cx='21'%20cy='10'%20r='1'%20fill='%23fff'/%3E%3Ccircle%20cx='17'%20cy='16'%20r='1'%20fill='%23fff'/%3E%3Ccircle%20cx='13.5'%20cy='10.5'%20r='1'%20fill='%23fff'/%3E%3C/svg%3E" alt="" width="30" height="30"></span><span class="text-[17px] font-semibold text-brand-text">AUD</span><span class="text-[15px] font-normal text-brand-muted">Australian Dollar</span><svg class="nv-check ml-auto w-5 h-5 text-brand-text shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li><li><button type="button" role="option" data-value="SGD" aria-selected="false" class="nv-opt flex w-full items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-brand-surface"><span class="nv-flag nv-flag-lg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Crect%20width='24'%20height='12'%20fill='%23EF3340'/%3E%3Crect%20y='12'%20width='24'%20height='12'%20fill='%23fff'/%3E%3Ccircle%20cx='7.5'%20cy='6'%20r='3.6'%20fill='%23fff'/%3E%3Ccircle%20cx='9'%20cy='6'%20r='3.2'%20fill='%23EF3340'/%3E%3Ccircle%20cx='12.4'%20cy='3.4'%20r='.7'%20fill='%23fff'/%3E%3Ccircle%20cx='14.6'%20cy='5.1'%20r='.7'%20fill='%23fff'/%3E%3Ccircle%20cx='13.8'%20cy='7.7'%20r='.7'%20fill='%23fff'/%3E%3Ccircle%20cx='11'%20cy='7.7'%20r='.7'%20fill='%23fff'/%3E%3Ccircle%20cx='10.2'%20cy='5.1'%20r='.7'%20fill='%23fff'/%3E%3C/svg%3E" alt="" width="30" height="30"></span><span class="text-[17px] font-semibold text-brand-text">SGD</span><span class="text-[15px] font-normal text-brand-muted">Singapore Dollar</span><svg class="nv-check ml-auto w-5 h-5 text-brand-text shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li><li><button type="button" role="option" data-value="JPY" aria-selected="false" class="nv-opt flex w-full items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-brand-surface"><span class="nv-flag nv-flag-lg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Crect%20width='24'%20height='24'%20fill='%23fff'/%3E%3Ccircle%20cx='12'%20cy='12'%20r='6'%20fill='%23BC002D'/%3E%3C/svg%3E" alt="" width="30" height="30"></span><span class="text-[17px] font-semibold text-brand-text">JPY</span><span class="text-[15px] font-normal text-brand-muted">Japanese Yen</span><svg class="nv-check ml-auto w-5 h-5 text-brand-text shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li><li><button type="button" role="option" data-value="CNY" aria-selected="false" class="nv-opt flex w-full items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-brand-surface"><span class="nv-flag nv-flag-lg"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Crect%20width='24'%20height='24'%20fill='%23DE2910'/%3E%3Cpath%20d='M6%203l1.2%203.7h3.9l-3.15%202.3%201.2%203.7L6%2010.4%202.85%2012.7l1.2-3.7L.9%206.7h3.9z'%20fill='%23FFDE00'/%3E%3Ccircle%20cx='12'%20cy='3.5'%20r='.8'%20fill='%23FFDE00'/%3E%3Ccircle%20cx='14'%20cy='6'%20r='.8'%20fill='%23FFDE00'/%3E%3Ccircle%20cx='14'%20cy='9'%20r='.8'%20fill='%23FFDE00'/%3E%3Ccircle%20cx='12'%20cy='11.5'%20r='.8'%20fill='%23FFDE00'/%3E%3C/svg%3E" alt="" width="30" height="30"></span><span class="text-[17px] font-semibold text-brand-text">CNY</span><span class="text-[15px] font-normal text-brand-muted">Chinese Yuan</span><svg class="nv-check ml-auto w-5 h-5 text-brand-text shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li>
+  </ul>
+</div>
+
+              <a href="#contact" class="hidden xl:inline-flex items-center gap-1.5 text-[18px] min-[1800px]:text-[19px] font-medium text-brand-text border-b border-dotted border-brand-text leading-tight hover:text-brand-coral hover:border-brand-coral transition-colors">
+                Manage my booking
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+
+              <a href="all-tour.html" class="nv-book hidden md:inline-flex items-center bg-brand-text hover:bg-[#2D2680] text-white text-[15px] md:text-[18px] min-[1800px]:text-[19px] font-semibold px-5 md:px-[30px] h-[42px] md:h-[50px] md:min-w-[154px] justify-center whitespace-nowrap rounded-full transition-colors">
+                Book now
+              </a>
+
+              <!-- Mobile hamburger -->
+              <button id="mobile-menu-btn" class="xl:hidden p-2 text-brand-text rounded-full hover:bg-brand-surface focus:outline-none focus:ring-2 focus:ring-brand-text" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- MOBILE DRAWER -->
+      <div id="mobile-menu" class="hidden xl:hidden fixed inset-x-3 top-3 bottom-3 z-[35] bg-white rounded-[36px] shadow-2xl overflow-hidden" role="dialog" aria-label="Main menu">
+        <div class="mm-scroll h-full overflow-y-auto overscroll-contain px-6 pt-[88px] pb-6">
+
+          <!-- Main view -->
+          <div data-mm-view="main">
+            <nav class="flex flex-col">
+              <button type="button" class="mm-row" data-mm-open="about"><span>About us</span><svg class="w-5 h-5 text-brand-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M9 5l7 7-7 7"/></svg></button>
+              <button type="button" class="mm-row" data-mm-open="go"><span>Before you go</span><svg class="w-5 h-5 text-brand-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M9 5l7 7-7 7"/></svg></button>
+              <a href="discover.html" class="mm-row">Discover</a>
+              <a href="homepage.html#on-sale" class="mm-row">Special offer</a>
+            </nav>
+
+            <!-- Promo card -->
+            <a href="homepage.html#on-sale" class="mm-promo relative flex mt-4 bg-white border border-brand-border rounded-[26px] p-1.5">
+              <span class="block w-[52%] min-h-[130px] rounded-[20px] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=700&q=80" alt="Travellers on a Bali trail" class="w-full h-full object-cover" loading="lazy">
+              </span>
+              <span class="relative -ml-8 flex-1 flex flex-col justify-center bg-white rounded-[20px] px-3.5 py-3">
+                <span class="block font-semibold uppercase text-[15px] leading-tight text-brand-text">On sale now</span>
+                <span class="block mt-1.5 text-[13px] leading-snug text-brand-text">Check out our hottest offers!</span>
+              </span>
+            </a>
+
+            <!-- Currency -->
+            <button type="button" class="mm-row mt-3" data-mm-open="currency">
+              <span class="flex items-center gap-3">
+                <span class="nv-flag"><img id="mm-cur-flag" src="" alt="" width="22" height="22"></span>
+                <span id="mm-cur-label" class="text-[15px] leading-tight border-b border-dotted border-brand-text">IDR</span>
+              </span>
+              <svg class="w-5 h-5 text-brand-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <a href="#contact" class="mm-row"><span>Manage my booking</span><svg class="w-5 h-5 text-brand-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M7 17L17 7M9 7h8v8"/></svg></a>
+
+            <a href="all-tour.html" class="mt-3 flex items-center justify-center h-[48px] rounded-full bg-brand-text hover:bg-[#2D2680] text-white font-bold text-[17px] transition-colors">Book now</a>
+          </div>
+
+          <!-- About us -->
+          <div data-mm-view="about" hidden>
+            <button type="button" class="mm-back" data-mm-back><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 5l-7 7 7 7"/></svg><span>About us</span></button>
+            <a href="#why-travel" class="mm-row">Why Soulvana</a>
+            <a href="homepage.html#story" class="mm-row">Our Story</a>
+            <a href="homepage.html#gallery" class="mm-row">Gallery</a>
+            <a href="#difference" class="mm-row">Book with confidence</a>
+            <a href="#travellers" class="mm-row">Our reviews</a>
+            <a href="#contact" class="mm-row">Contact us</a>
+            <a href="#contact" class="mm-row">Work with us</a>
+          </div>
+
+          <!-- Before you go -->
+          <div data-mm-view="go" hidden>
+            <button type="button" class="mm-back" data-mm-back><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 5l-7 7 7 7"/></svg><span>Before you go</span></button>
+            <a href="faq.html" class="mm-row">FAQs</a>
+            <a href="#contact" class="mm-row">Travel insurance</a>
+            <a href="#contact" class="mm-row">Manage my booking</a>
+          </div>
+
+          <!-- Currency -->
+          <div data-mm-view="currency" hidden>
+            <button type="button" class="mm-back" data-mm-back><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 5l-7 7 7 7"/></svg><span>Currency</span></button>
+            <div id="mm-cur-list" class="flex flex-col gap-1"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WATCH VIDEO (centered in hero) -->
+      <div class="absolute inset-0 z-20 flex items-center justify-center pt-[110px] md:pt-[220px] pointer-events-none">
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Watch video on YouTube (opens in a new tab)" class="pointer-events-auto group inline-flex items-center gap-3 md:gap-4 bg-brand-text hover:bg-[#2D2680] text-white font-bold uppercase tracking-[0.08em] text-[14px] md:text-[18px] h-[52px] md:h-[68px] pl-3 md:pl-4 pr-6 md:pr-8 rounded-full shadow-pill hover:shadow-pill-hover hover:-translate-y-0.5 transition-all focus:outline-none focus-visible:ring-4 focus-visible:ring-white/70">
+          <span class="flex items-center justify-center w-[34px] h-[34px] md:w-[46px] md:h-[46px] rounded-full bg-white shrink-0" aria-hidden="true">
+            <svg class="w-4 h-4 md:w-5 md:h-5 ml-0.5" viewBox="0 0 24 24" fill="#1B1648"><path d="M8 5.5v13a1 1 0 001.55.83l10-6.5a1 1 0 000-1.66l-10-6.5A1 1 0 008 5.5z"/></svg>
+          </span>
+          Watch Video
+        </a>
+      </div>
+
+
+    </div>
+
+    <!-- Floating chat button -->
+    <a href="#contact" class="fixed z-50 bottom-[18px] right-[18px] md:bottom-7 md:right-10 w-[44px] h-[44px] md:w-[60px] md:h-[60px] rounded-full bg-brand-text hover:bg-[#2D2680] text-white flex items-center justify-center shadow-xl transition-colors" aria-label="Chat with us">
+      <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v9a2 2 0 01-2 2H9l-5 4V6z"/></svg>
+    </a>
+  </header>
+
+  <!-- =========================================================================
+       OUR CATEGORIES (tepat di bawah hero)
+       ========================================================================= -->
+  <section id="categories" class="bg-white px-4 py-14 md:py-20">
+    <style>
+      #categories { --cat-orange:#F9A045; --cat-orange-hover:#FFB462; --cat-navy:#1B1648; }
+      .font-serif-cat { font-family: 'Marcellus', Georgia, 'Times New Roman', serif; }
+      /* Mobile: 2-column tall cards, centered title + button, no description */
+      @media (max-width: 639px) {
+        #categories { padding-left: 10px; padding-right: 10px; }
+        #categories .cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+        #categories .cat-card { aspect-ratio: 1 / 1.4; border-radius: 14px; }
+        #categories .cat-body { padding: 0 8px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+        #categories .cat-name { font-size: 19px; line-height: 1.2; }
+        #categories .cat-desc { display: none; }
+        #categories .cat-btn { margin-top: 10px; gap: 10px; height: 38px; padding-left: 14px; padding-right: 5px; font-size: 12.5px; }
+        #categories .cat-btn > span { width: 28px; height: 28px; }
+        #categories .cat-btn svg { width: 12px; height: 12px; }
+      }
+      @media (min-width: 1280px) {
+        #categories { padding-top: calc(var(--u) * 90); padding-bottom: calc(var(--u) * 90); }
+        #categories .cat-inner { max-width: calc(var(--u) * 1640) !important; }
+        #categories .cat-grid { gap: calc(var(--u) * 20); }
+        #categories .cat-eyebrow { font-size: calc(var(--u) * 16); }
+        #categories .cat-title { font-size: calc(var(--u) * 46); }
+        #categories .cat-name { font-size: calc(var(--u) * 28); }
+        #categories .cat-desc { font-size: calc(var(--u) * 17); }
+      }
+    </style>
+    <div class="cat-inner mx-auto max-w-[1640px]">
+      <div class="text-center">
+        <p class="cat-eyebrow text-[13px] md:text-[14px] font-bold tracking-[0.22em] uppercase text-[var(--cat-navy)]">Our Categories</p>
+        <h2 class="cat-title font-serif-cat mt-4 text-[32px] md:text-[44px] leading-[1.15] text-[var(--cat-navy)]">Explore All Our Bali Travel Services</h2>
+      </div>
+      <div class="cat-grid mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+        <a href="#pkg-day-trip" class="cat-card group relative block overflow-hidden rounded-[14px] aspect-[4/4.8] bg-[var(--cat-navy)]">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80" alt="Day Trip Bali" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0830]/80 via-[#0B0830]/15 to-transparent"></div>
+          <div class="cat-body absolute inset-x-0 bottom-0 p-5 md:p-[38px] pb-6 md:pb-[24px] text-white">
+            <h3 class="cat-name font-serif-cat text-[26px] leading-tight">Day Trip Bali</h3>
+            <p class="cat-desc mt-3 text-[16px] leading-[1.9] text-white/90">Explore curated travel experiences across Bali's top destinations.</p>
+            <span class="cat-btn mt-4 inline-flex items-center gap-4 rounded-full bg-[var(--cat-orange)] pl-[18px] pr-[7px] h-[46px] text-[var(--cat-navy)] font-serif-cat text-[15px] tracking-wide uppercase transition-colors group-hover:bg-[var(--cat-orange-hover)]">
+              Read more
+              <span class="flex items-center justify-center w-[32px] h-[32px] rounded-full bg-[var(--cat-navy)] text-white"><svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </span>
+          </div>
+        </a>
+        <a href="#pkg-overnight" class="cat-card group relative block overflow-hidden rounded-[14px] aspect-[4/4.8] bg-[var(--cat-navy)]">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Overnight Bali Tour" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0830]/80 via-[#0B0830]/15 to-transparent"></div>
+          <div class="cat-body absolute inset-x-0 bottom-0 p-5 md:p-[38px] pb-6 md:pb-[24px] text-white">
+            <h3 class="cat-name font-serif-cat text-[26px] leading-tight">Overnight Bali Tour</h3>
+            <p class="cat-desc mt-3 text-[16px] leading-[1.9] text-white/90">Multi-day Bali tours with overnight stays at top destinations.</p>
+            <span class="cat-btn mt-4 inline-flex items-center gap-4 rounded-full bg-[var(--cat-orange)] pl-[18px] pr-[7px] h-[46px] text-[var(--cat-navy)] font-serif-cat text-[15px] tracking-wide uppercase transition-colors group-hover:bg-[var(--cat-orange-hover)]">
+              Read more
+              <span class="flex items-center justify-center w-[32px] h-[32px] rounded-full bg-[var(--cat-navy)] text-white"><svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </span>
+          </div>
+        </a>
+        <a href="#pkg-honeymoon" class="cat-card group relative block overflow-hidden rounded-[14px] aspect-[4/4.8] bg-[var(--cat-navy)]">
+          <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=900&q=80" alt="Honeymoon Tour in Bali" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0830]/80 via-[#0B0830]/15 to-transparent"></div>
+          <div class="cat-body absolute inset-x-0 bottom-0 p-5 md:p-[38px] pb-6 md:pb-[24px] text-white">
+            <h3 class="cat-name font-serif-cat text-[26px] leading-tight">Honeymoon Tour in Bali</h3>
+            <p class="cat-desc mt-3 text-[16px] leading-[1.9] text-white/90">Romantic Bali tours designed for unforgettable honeymoon experiences.</p>
+            <span class="cat-btn mt-4 inline-flex items-center gap-4 rounded-full bg-[var(--cat-orange)] pl-[18px] pr-[7px] h-[46px] text-[var(--cat-navy)] font-serif-cat text-[15px] tracking-wide uppercase transition-colors group-hover:bg-[var(--cat-orange-hover)]">
+              Read more
+              <span class="flex items-center justify-center w-[32px] h-[32px] rounded-full bg-[var(--cat-navy)] text-white"><svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </span>
+          </div>
+        </a>
+        <a href="#pkg-activities" class="cat-card group relative block overflow-hidden rounded-[14px] aspect-[4/4.8] bg-[var(--cat-navy)]">
+          <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=900&q=80" alt="Activities In Bali" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0830]/80 via-[#0B0830]/15 to-transparent"></div>
+          <div class="cat-body absolute inset-x-0 bottom-0 p-5 md:p-[38px] pb-6 md:pb-[24px] text-white">
+            <h3 class="cat-name font-serif-cat text-[26px] leading-tight">Activities In Bali</h3>
+            <p class="cat-desc mt-3 text-[16px] leading-[1.9] text-white/90">Top-rated outdoor and cultural activities to enjoy across Bali.</p>
+            <span class="cat-btn mt-4 inline-flex items-center gap-4 rounded-full bg-[var(--cat-orange)] pl-[18px] pr-[7px] h-[46px] text-[var(--cat-navy)] font-serif-cat text-[15px] tracking-wide uppercase transition-colors group-hover:bg-[var(--cat-orange-hover)]">
+              Read more
+              <span class="flex items-center justify-center w-[32px] h-[32px] rounded-full bg-[var(--cat-navy)] text-white"><svg class="w-[14px] h-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PACKAGES (6 paket per kategori, ganti lewat tab / klik kartu kategori)
+       ========================================================================= -->
+    <!-- ===== PAKET: Day Trip Bali ===== -->
+  <section id="pkg-day-trip" class="pk-sec bg-white px-4 py-14 md:py-20 scroll-mt-6">
+    <style>
+      .pk-sec { --pk-orange:#F9A045; --pk-navy:#1B1648; }
+      .pk-sec .pk-serif { font-family:'Marcellus', Georgia, 'Times New Roman', serif; }
+      .pk-sec .pk-grid { display:grid; grid-template-columns:1fr; gap:34px 22px; }
+      @media (min-width:640px) { .pk-sec .pk-grid { grid-template-columns:repeat(2,1fr); } }
+      @media (min-width:1024px) { .pk-sec .pk-grid { grid-template-columns:repeat(3,1fr); } }
+      .pk-sec .pk-img { position:relative; height:240px; border-radius:28px; overflow:hidden; }
+      .pk-sec .pk-img img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .7s ease; }
+      .pk-sec .pk-card:hover .pk-img img { transform:scale(1.05); }
+      .pk-sec .pk-rate { position:absolute; top:16px; right:16px; display:flex; align-items:center; gap:6px; background:#fff; color:#5E5B7A; font-size:15px; padding:7px 13px; border-radius:999px; }
+      .pk-sec .pk-rate svg { width:18px; height:18px; fill:var(--pk-orange); }
+      .pk-sec .pk-loc { display:flex; align-items:center; gap:12px; margin:18px 0 0 6px; font-size:15px; color:#5E5B7A; }
+      .pk-sec .pk-pin { width:20px; height:20px; flex:none; }
+      .pk-sec .pk-dur { margin-left:auto; background:rgba(249,160,69,.16); color:var(--pk-navy); font-weight:600; font-size:13px; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+      .pk-sec .pk-name { margin:12px 0 0 6px; font-size:22px; font-weight:600; color:var(--pk-navy); letter-spacing:-.02em; line-height:1.2; min-height:2.4em; }
+      .pk-sec .pk-bar { margin-top:14px; height:54px; border-radius:999px; background:var(--pk-navy); color:#fff; display:flex; align-items:center; justify-content:space-between; padding:0 24px; transition:background .25s; }
+      .pk-sec .pk-card:hover .pk-bar { background:#2A2366; }
+      .pk-sec .pk-price { font-size:20px; font-weight:600; letter-spacing:-.02em; }
+      .pk-sec .pk-price i { font-size:14px; font-weight:400; opacity:.85; margin-left:4px; }
+      .pk-sec .pk-more { display:flex; align-items:center; gap:6px; font-weight:600; font-size:15px; }
+      .pk-sec .pk-more svg { width:16px; height:16px; }
+      /* Mobile: 2-column compact cards */
+      @media (max-width:639px) {
+        .pk-sec { padding-left:14px; padding-right:14px; }
+        .pk-sec .pk-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px 12px; }
+        .pk-sec .pk-img { height:auto; aspect-ratio:1/0.78; border-radius:22px; }
+        .pk-sec .pk-rate { top:10px; right:10px; font-size:11px; gap:4px; padding:4px 9px; }
+        .pk-sec .pk-rate svg { width:11px; height:11px; }
+        .pk-sec .pk-loc { margin:12px 0 0 4px; gap:8px; font-size:12px; }
+        .pk-sec .pk-pin { width:15px; height:15px; }
+        .pk-sec .pk-dur { display:none; }
+        .pk-sec .pk-name { margin:8px 0 0 4px; font-size:15px; line-height:1.3; min-height:3.9em; }
+        .pk-sec .pk-bar { margin-top:10px; height:38px; padding:0 12px; }
+        .pk-sec .pk-price { font-size:12px; white-space:nowrap; }
+        .pk-sec .pk-price i { font-size:9px; margin-left:2px; }
+        .pk-sec .pk-more { font-size:11.5px; gap:3px; white-space:nowrap; }
+        .pk-sec .pk-more svg { width:11px; height:11px; }
+      }
+      @media (max-width:389px) { .pk-sec .pk-price i { display:none; } }
+      @media (min-width:1280px) {
+        .pk-sec { padding-top:calc(var(--u)*80); padding-bottom:calc(var(--u)*80); }
+        .pk-sec .pk-inner { max-width:calc(var(--u)*1640) !important; }
+        .pk-sec .pk-grid { gap:calc(var(--u)*40) calc(var(--u)*22); }
+        .pk-sec .pk-img { height:calc(var(--u)*300); border-radius:calc(var(--u)*34); }
+        .pk-sec .pk-name { font-size:calc(var(--u)*26); }
+        .pk-sec .pk-loc, .pk-sec .pk-more, .pk-sec .pk-rate { font-size:calc(var(--u)*17); }
+        .pk-sec .pk-dur { font-size:calc(var(--u)*14); }
+        .pk-sec .pk-bar { height:calc(var(--u)*62); }
+        .pk-sec .pk-price { font-size:calc(var(--u)*24); }
+        .pk-sec .pk-eyebrow { font-size:calc(var(--u)*16); }
+        .pk-sec .pk-title { font-size:calc(var(--u)*46); }
+      }
+    </style>
+    <div class="pk-inner mx-auto max-w-[1640px]">
+      <div class="text-center">
+        <p class="pk-eyebrow text-[13px] md:text-[14px] font-bold tracking-[0.22em] uppercase text-[#1B1648]">Day Trip Bali</p>
+        <h2 class="pk-title pk-serif mt-4 text-[30px] md:text-[44px] leading-[1.15] text-[#1B1648]">Best Bali Day Tour Packages</h2>
+      </div>
+      <div class="pk-grid mt-10 md:mt-12">
+        <a href="signature-journey.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Soulvana Signature Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">7D / 6N</span></p>
+          <h3 class="pk-name">Soulvana Signature Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 31.9M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="inner-journey.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Soulvana Inner Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">5D / 4N</span></p>
+          <h3 class="pk-name">Soulvana Inner Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 13.7M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="essence-retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Soulvana Essence Retreat" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">4D / 3N</span></p>
+          <h3 class="pk-name">Soulvana Essence Retreat</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 18.2M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=900&q=80" alt="Lunar Retreat" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>4.9</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">2D / 1N</span></p>
+          <h3 class="pk-name">Lunar Retreat</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 9.1M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80" alt="Bali Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>4.9</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>West Bali, Indonesia<span class="pk-dur">1 Day</span></p>
+          <h3 class="pk-name">Bali Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 4.6M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?auto=format&fit=crop&w=900&q=80" alt="Mother Temple Pilgrimage" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Besakih, East Bali<span class="pk-dur">1 Day</span></p>
+          <h3 class="pk-name">Mother Temple Pilgrimage</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 4.6M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAKET: Overnight Bali Tour ===== -->
+  <section id="pkg-overnight" class="pk-sec bg-white px-4 py-14 md:py-20 scroll-mt-6">
+    <div class="pk-inner mx-auto max-w-[1640px]">
+      <div class="text-center">
+        <p class="pk-eyebrow text-[13px] md:text-[14px] font-bold tracking-[0.22em] uppercase text-[#1B1648]">Overnight Bali Tour</p>
+        <h2 class="pk-title pk-serif mt-4 text-[30px] md:text-[44px] leading-[1.15] text-[#1B1648]">Best Bali Overnight Tour Packages</h2>
+      </div>
+      <div class="pk-grid mt-10 md:mt-12">
+        <a href="signature-journey.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Soulvana Signature Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">7D / 6N</span></p>
+          <h3 class="pk-name">Soulvana Signature Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 31.9M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="inner-journey.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Soulvana Inner Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">5D / 4N</span></p>
+          <h3 class="pk-name">Soulvana Inner Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 13.7M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="essence-retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Soulvana Essence Retreat" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">4D / 3N</span></p>
+          <h3 class="pk-name">Soulvana Essence Retreat</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 18.2M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=900&q=80" alt="Lunar Retreat" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>4.9</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">2D / 1N</span></p>
+          <h3 class="pk-name">Lunar Retreat</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 9.1M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80" alt="Bali Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>4.9</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>West Bali, Indonesia<span class="pk-dur">1 Day</span></p>
+          <h3 class="pk-name">Bali Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 4.6M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?auto=format&fit=crop&w=900&q=80" alt="Mother Temple Pilgrimage" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Besakih, East Bali<span class="pk-dur">1 Day</span></p>
+          <h3 class="pk-name">Mother Temple Pilgrimage</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 4.6M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAKET: Honeymoon Tour in Bali ===== -->
+  <section id="pkg-honeymoon" class="pk-sec bg-white px-4 py-14 md:py-20 scroll-mt-6">
+    <div class="pk-inner mx-auto max-w-[1640px]">
+      <div class="text-center">
+        <p class="pk-eyebrow text-[13px] md:text-[14px] font-bold tracking-[0.22em] uppercase text-[#1B1648]">Honeymoon Tour in Bali</p>
+        <h2 class="pk-title pk-serif mt-4 text-[30px] md:text-[44px] leading-[1.15] text-[#1B1648]">Best Bali Honeymoon Packages</h2>
+      </div>
+      <div class="pk-grid mt-10 md:mt-12">
+        <a href="signature-journey.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Soulvana Signature Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">7D / 6N</span></p>
+          <h3 class="pk-name">Soulvana Signature Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 31.9M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="inner-journey.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Soulvana Inner Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">5D / 4N</span></p>
+          <h3 class="pk-name">Soulvana Inner Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 13.7M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="essence-retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Soulvana Essence Retreat" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">4D / 3N</span></p>
+          <h3 class="pk-name">Soulvana Essence Retreat</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 18.2M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=900&q=80" alt="Lunar Retreat" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>4.9</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">2D / 1N</span></p>
+          <h3 class="pk-name">Lunar Retreat</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 9.1M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80" alt="Bali Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>4.9</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>West Bali, Indonesia<span class="pk-dur">1 Day</span></p>
+          <h3 class="pk-name">Bali Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 4.6M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?auto=format&fit=crop&w=900&q=80" alt="Mother Temple Pilgrimage" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Besakih, East Bali<span class="pk-dur">1 Day</span></p>
+          <h3 class="pk-name">Mother Temple Pilgrimage</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 4.6M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAKET: Activities In Bali ===== -->
+  <section id="pkg-activities" class="pk-sec bg-white px-4 py-14 md:py-20 scroll-mt-6">
+    <div class="pk-inner mx-auto max-w-[1640px]">
+      <div class="text-center">
+        <p class="pk-eyebrow text-[13px] md:text-[14px] font-bold tracking-[0.22em] uppercase text-[#1B1648]">Activities In Bali</p>
+        <h2 class="pk-title pk-serif mt-4 text-[30px] md:text-[44px] leading-[1.15] text-[#1B1648]">Top Bali Activities &amp; Experiences</h2>
+      </div>
+      <div class="pk-grid mt-10 md:mt-12">
+        <a href="signature-journey.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Soulvana Signature Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">7D / 6N</span></p>
+          <h3 class="pk-name">Soulvana Signature Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 31.9M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="inner-journey.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Soulvana Inner Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">5D / 4N</span></p>
+          <h3 class="pk-name">Soulvana Inner Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 13.7M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="essence-retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Soulvana Essence Retreat" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">4D / 3N</span></p>
+          <h3 class="pk-name">Soulvana Essence Retreat</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 18.2M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=900&q=80" alt="Lunar Retreat" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>4.9</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Bali, Indonesia<span class="pk-dur">2D / 1N</span></p>
+          <h3 class="pk-name">Lunar Retreat</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 9.1M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80" alt="Bali Journey" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>4.9</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>West Bali, Indonesia<span class="pk-dur">1 Day</span></p>
+          <h3 class="pk-name">Bali Journey</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 4.6M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+        <a href="retreat.html" class="pk-card block">
+          <div class="pk-img"><img src="https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?auto=format&fit=crop&w=900&q=80" alt="Mother Temple Pilgrimage" loading="lazy"><span class="pk-rate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>5.0</span></div>
+          <p class="pk-loc"><svg class="pk-pin" viewBox="0 0 24 24" fill="none" stroke="#F9A045" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.8"/><path d="M12 1.5v3.2M12 19.3v3.2M1.5 12h3.2M19.3 12h3.2"/></svg>Besakih, East Bali<span class="pk-dur">1 Day</span></p>
+          <h3 class="pk-name">Mother Temple Pilgrimage</h3>
+          <div class="pk-bar"><span class="pk-price">IDR 4.6M <i>/ person</i></span><span class="pk-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT US
+       ========================================================================= -->
+  <section id="about" class="bg-white px-4 py-12 md:py-16">
+    <div class="mx-auto max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+
+      <!-- Image collage -->
+      <div class="relative">
+        <div class="rounded-[32px] md:rounded-[44px] overflow-hidden aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] max-h-[520px] w-full lg:w-[82%]">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80" alt="Rice terraces and misty peaks in Bali" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="absolute -bottom-6 right-0 w-[48%] sm:w-[42%] rounded-[24px] md:rounded-[36px] overflow-hidden border-[6px] border-white shadow-card aspect-square">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="A calm retreat space surrounded by tropical greenery" class="w-full h-full object-cover" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Copy -->
+      <div class="pt-6 lg:pt-0">
+        <span class="inline-flex items-center bg-white text-brand-text font-bold text-[14px] md:text-[16px] px-4 py-1.5 rounded-full">About us</span>
+        <h2 class="mt-5 text-[28px] sm:text-[34px] md:text-[40px] font-extrabold text-brand-text tracking-[-0.04em] leading-[1.08]">Different ways to experience Bali. One Soulvana.</h2>
+        <p class="mt-6 text-brand-muted text-[15px] md:text-[16px] leading-[1.65]">
+          Soulvana is a Bali-based team crafting small-group adventures and mindful retreats for travellers who want more than a checklist. Whether you are chasing hidden waterfalls or slowing down in a jungle sanctuary, every journey is designed around Bali&rsquo;s nature, culture and people.
+        </p>
+        <p class="mt-4 text-brand-muted text-[15px] md:text-[16px] leading-[1.65]">
+          We work with local guides, families and communities, so what you experience is genuine and what you spend stays close to home.
+        </p>
+
+        <ul class="mt-6 space-y-3 text-[15px] md:text-[16px] font-medium text-brand-text">
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0" fill="none" stroke="#1B1648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Mindful retreats and wild adventures in one place</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0" fill="none" stroke="#1B1648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Small groups led by local guides</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0" fill="none" stroke="#1B1648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Journeys rooted in Balinese culture and community</span></li>
+        </ul>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4 sm:gap-6">
+          <a href="homepage.html#story" class="inline-flex items-center justify-center bg-brand-text hover:bg-[#2D2680] text-white font-bold text-[15px] h-[46px] px-6 rounded-full transition-colors">Read our story</a>
+          <a href="#contact" class="inline-flex items-center text-[15px] font-semibold text-brand-text border-b border-dotted border-brand-text hover:text-brand-coral hover:border-brand-coral transition-colors py-0.5">Chat with us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="difference" class="bg-white px-4 py-16 md:py-24">
+    <div class="bc-inner mx-auto max-w-[1300px]">
+      
+      <!-- Section Header -->
+      <div class="text-center">
+        <h2 class="bc-title text-[36px] md:text-[52px] font-extrabold text-brand-text tracking-[-0.04em] leading-tight">
+          The Soulvana Difference
+        </h2>
+        <p class="mt-3 text-[17px] md:text-[21px] text-brand-muted leading-relaxed tracking-[-0.01em]">
+          More than a getaway. A meaningful way to experience Bali.
+        </p>
+      </div>
+
+      <!-- 2x2 Grid -->
+      <div class="bc-grid mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+        
+        <!-- Card 1: Thoughtfully Curated Journeys -->
+        <div class="bc-card bg-white rounded-[24px] md:rounded-[36px] px-8 py-10 md:py-14 text-center flex flex-col items-center">
+          <svg viewBox="0 0 24 24" class="bc-icon w-8 h-8" aria-hidden="true" fill="none" stroke="#1B1648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3"/><path d="M12 9v5"/><ellipse cx="12" cy="17.5" rx="9" ry="3.5"/></svg>
+          <h3 class="bc-name mt-6 text-[22px] md:text-[28px] font-bold text-brand-text tracking-[-0.02em] leading-tight">
+            Thoughtfully Curated Journeys
+          </h3>
+          <p class="bc-text mt-4 text-brand-muted text-[15px] md:text-[18px] leading-[1.65] max-w-md mx-auto">
+            Every journey brings together carefully selected destinations, local experiences, and moments worth remembering.
+          </p>
+        </div>
+
+        <!-- Card 2: Rooted in Local Culture -->
+        <div class="bc-card bg-white rounded-[24px] md:rounded-[36px] px-8 py-10 md:py-14 text-center flex flex-col items-center">
+          <svg viewBox="0 0 24 24" class="bc-icon w-8 h-8" aria-hidden="true" fill="none" stroke="#1B1648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+          <h3 class="bc-name mt-6 text-[22px] md:text-[28px] font-bold text-brand-text tracking-[-0.02em] leading-tight">
+            Rooted in Local Culture
+          </h3>
+          <p class="bc-text mt-4 text-brand-muted text-[15px] md:text-[18px] leading-[1.65] max-w-md mx-auto">
+            Discover Bali beyond the usual sights through local traditions, community encounters, and authentic cultural experiences.
+          </p>
+        </div>
+
+        <!-- Card 3: A More Personal Experience -->
+        <div class="bc-card bg-white rounded-[24px] md:rounded-[36px] px-8 py-10 md:py-14 text-center flex flex-col items-center">
+          <svg viewBox="0 0 24 24" class="bc-icon w-8 h-8" aria-hidden="true" fill="none" stroke="#1B1648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <h3 class="bc-name mt-6 text-[22px] md:text-[28px] font-bold text-brand-text tracking-[-0.02em] leading-tight">
+            A More Personal Experience
+          </h3>
+          <p class="bc-text mt-4 text-brand-muted text-[15px] md:text-[18px] leading-[1.65] max-w-md mx-auto">
+            From mindful retreats to outdoor adventures, each program is designed to help you connect with the places and moments that matter.
+          </p>
+        </div>
+
+        <!-- Card 4: Guided Every Step -->
+        <div class="bc-card bg-white rounded-[24px] md:rounded-[36px] px-8 py-10 md:py-14 text-center flex flex-col items-center">
+          <svg viewBox="0 0 24 24" class="bc-icon w-8 h-8" aria-hidden="true" fill="none" stroke="#1B1648" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg>
+          <h3 class="bc-name mt-6 text-[22px] md:text-[28px] font-bold text-brand-text tracking-[-0.02em] leading-tight">
+            Guided Every Step
+          </h3>
+          <p class="bc-text mt-4 text-brand-muted text-[15px] md:text-[18px] leading-[1.65] max-w-md mx-auto">
+            Our team helps coordinate your planned experiences, so you can focus on exploring, discovering, and enjoying your journey.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+   <!-- =========================================================================
+       ON SALE (3 cards)
+       ========================================================================= -->
+  <section id="on-sale" class="bg-white px-4 py-14 md:py-16 overflow-x-clip">
+    <style>
+      /* Sejajar dengan section "Top experiences": lebar, margin kiri-kanan, dan jarak sama */
+      @media (min-width: 1280px) {
+        #on-sale { padding-top: calc(var(--u) * 90); padding-bottom: calc(var(--u) * 90); }
+        #on-sale .os-inner { max-width: calc(var(--u) * 1640) !important; width: 100%; margin-left: auto; margin-right: auto; align-items: center !important; }
+        #on-sale .os-left { width: calc(var(--u) * 340); margin-left: 0; margin-right: calc(var(--u) * 73); }
+        #on-sale .os-track { flex: 1 1 0; min-width: 0; gap: calc(var(--u) * 28); padding-right: 0; overflow: visible; }
+        #on-sale .os-card { flex: 1 1 0; width: auto; min-width: 0; }
+      }
+    </style>
+    <div class="os-inner mx-auto flex flex-col xl:flex-row xl:items-center gap-10 xl:gap-0">
+
+      <!-- Left copy -->
+      <div class="os-left xl:shrink-0 text-center md:text-left">
+        <h2 class="os-title text-[44px] sm:text-[56px] font-extrabold text-brand-text tracking-[-0.04em] leading-[1.1]">On Sale</h2>
+        <p class="os-text mt-5 text-brand-muted text-[17px] leading-[1.6] tracking-[-0.01em]">Everyone loves a cheeky discount.</p>
+        <p class="os-text mt-4 text-brand-muted text-[17px] leading-[1.6] tracking-[-0.01em]">With selected <span aria-hidden="true">🔥</span> start dates on sale now, check out some of our hottest offers. Be quick, these final spaces will get snapped up fast!</p>
+        <a href="all-tour.html" class="os-btn mt-7 w-full md:w-auto inline-flex items-center justify-center bg-brand-text hover:bg-[#2D2680] text-white font-bold text-[17px] h-[52px] px-8 rounded-full transition-colors">See the deals</a>
+      </div>
+
+      <!-- 3 cards -->
+      <div class="os-track flex gap-5 overflow-x-auto snap-x snap-mandatory -mx-4 px-4 xl:mx-0 xl:px-0 xl:overflow-visible">
+
+        <a href="signature-journey.html" class="os-card group shrink-0 snap-start">
+          <div class="os-imgwrap">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Soulvana Signature Journey" loading="lazy">
+            <span class="os-sale"><span aria-hidden="true">🔥</span> On sale</span>
+          </div>
+          <div class="os-body">
+            <div class="flex flex-wrap gap-2"><span class="os-tag"><span aria-hidden="true">🧘</span>Wellness</span><span class="os-tag"><span aria-hidden="true">🎎</span>Culture</span></div>
+            <h3 class="os-name mt-3.5 text-[26px] font-semibold text-brand-text tracking-[-0.02em] leading-[1.15]">Soulvana Signature Journey</h3>
+            <div class="os-meta"><span>🗓️ 7 Days / 6 Nights</span><span><svg class="pin-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg>Bali</span><span>🧑‍🤝‍🧑 Ages 15 to 45</span></div>
+            <p class="os-desc mt-3.5 text-brand-muted text-[16px] leading-[1.6]">Soulvana's flagship program for a deeper journey of transformation, blending wellness, Balinese culture, self-reflection, and authentic experiences.</p>
+            <p class="os-price mt-auto pt-4 text-brand-text text-[17px]">From <b class="font-extrabold text-[24px]">A$ 2,500</b> <span class="text-brand-muted text-[14px]">AUD</span></p>
+          </div>
+        </a>
+
+        <a href="inner-journey.html" class="os-card group shrink-0 snap-start">
+          <div class="os-imgwrap">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Soulvana Inner Journey" loading="lazy">
+            <span class="os-sale"><span aria-hidden="true">🔥</span> On sale</span>
+          </div>
+          <div class="os-body">
+            <div class="flex flex-wrap gap-2"><span class="os-tag"><span aria-hidden="true">🧘</span>Wellness</span><span class="os-tag"><span aria-hidden="true">🕉️</span>Spiritual</span></div>
+            <h3 class="os-name mt-3.5 text-[26px] font-semibold text-brand-text tracking-[-0.02em] leading-[1.15]">Soulvana Inner Journey</h3>
+            <div class="os-meta"><span>🗓️ 5 Days / 4 Nights</span><span><svg class="pin-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg>Bali</span><span>🧑‍🤝‍🧑 Ages 15 to 45</span></div>
+            <p class="os-desc mt-3.5 text-brand-muted text-[16px] leading-[1.6]">A journey to slow down the pace of life, reconnect with yourself, and rediscover inner balance.</p>
+            <p class="os-price mt-auto pt-4 text-brand-text text-[17px]">From <b class="font-extrabold text-[24px]">A$ 1,078</b> <span class="text-brand-muted text-[14px]">AUD</span></p>
+          </div>
+        </a>
+
+        <a href="essence-retreat.html" class="os-card group shrink-0 snap-start">
+          <div class="os-imgwrap">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Soulvana Essence Retreat" loading="lazy">
+            <span class="os-sale"><span aria-hidden="true">🔥</span> On sale</span>
+          </div>
+          <div class="os-body">
+            <div class="flex flex-wrap gap-2"><span class="os-tag"><span aria-hidden="true">🧘</span>Wellness</span><span class="os-tag"><span aria-hidden="true">🌄</span>Nature</span></div>
+            <h3 class="os-name mt-3.5 text-[26px] font-semibold text-brand-text tracking-[-0.02em] leading-[1.15]">Soulvana Essence Retreat</h3>
+            <div class="os-meta"><span>🗓️ 4 Days / 3 Nights</span><span><svg class="pin-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg>Bali</span><span>🧑‍🤝‍🧑 Ages 15 to 45</span></div>
+            <p class="os-desc mt-3.5 text-brand-muted text-[16px] leading-[1.6]">A short experience to enjoy the essence of Soulvana through wellness, stillness, and connection with nature.</p>
+            <p class="os-price mt-auto pt-4 text-brand-text text-[17px]">From <b class="font-extrabold text-[24px]">A$ 1,428</b> <span class="text-brand-muted text-[14px]">AUD</span></p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ON SALE (3 cards)
+       ========================================================================= -->
+  <section id="on-sale" class="bg-white px-4 py-14 md:py-16 overflow-x-clip">
+    <style>
+      /* Sejajar dengan section "Top experiences": lebar, margin kiri-kanan, dan jarak sama */
+      @media (min-width: 1280px) {
+        #on-sale { padding-top: calc(var(--u) * 90); padding-bottom: calc(var(--u) * 90); }
+        #on-sale .os-inner { max-width: calc(var(--u) * 1640) !important; width: 100%; margin-left: auto; margin-right: auto; align-items: center !important; }
+        #on-sale .os-left { width: calc(var(--u) * 340); margin-left: 0; margin-right: calc(var(--u) * 73); }
+        #on-sale .os-track { flex: 1 1 0; min-width: 0; gap: calc(var(--u) * 28); padding-right: 0; overflow: visible; }
+        #on-sale .os-card { flex: 1 1 0; width: auto; min-width: 0; }
+      }
+    </style>
+    <div class="os-inner mx-auto flex flex-col xl:flex-row xl:items-center gap-10 xl:gap-0">
+
+      <!-- Left copy -->
+      <div class="os-left xl:shrink-0 text-center md:text-left">
+        <h2 class="os-title text-[44px] sm:text-[56px] font-extrabold text-brand-text tracking-[-0.04em] leading-[1.1]">On Sale</h2>
+        <p class="os-text mt-5 text-brand-muted text-[17px] leading-[1.6] tracking-[-0.01em]">Everyone loves a cheeky discount.</p>
+        <p class="os-text mt-4 text-brand-muted text-[17px] leading-[1.6] tracking-[-0.01em]">With selected <span aria-hidden="true">🔥</span> start dates on sale now, check out some of our hottest offers. Be quick, these final spaces will get snapped up fast!</p>
+        <a href="all-tour.html" class="os-btn mt-7 w-full md:w-auto inline-flex items-center justify-center bg-brand-text hover:bg-[#2D2680] text-white font-bold text-[17px] h-[52px] px-8 rounded-full transition-colors">See the deals</a>
+      </div>
+
+      <!-- 3 cards -->
+      <div class="os-track flex gap-5 overflow-x-auto snap-x snap-mandatory -mx-4 px-4 xl:mx-0 xl:px-0 xl:overflow-visible">
+
+<!-- Card 4: Lunar Retreat -->
+          <a href="retreat.html" class="os-card group shrink-0 snap-start">
+            <div class="os-imgwrap">
+              <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=900&q=80" alt="Lunar Retreat" loading="lazy">
+              <span class="os-sale">🔥 On sale</span>
+            </div>
+            <div class="os-body">
+              <div class="flex flex-wrap gap-2">
+                <span class="os-tag"><span aria-hidden="true">✨</span>Spiritual</span>
+                <span class="os-tag"><span aria-hidden="true">🙏</span>Culture</span>
+              </div>
+              <h3 class="os-name mt-4 text-[26px] font-semibold text-brand-text tracking-[-0.02em] leading-[1.15]">Lunar Retreat</h3>
+              <div class="os-meta">
+                <span>🗓️ 2 Days / 1 Night</span>
+                <span><svg class="pin-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg>Bali</span>
+                <span>👥 Ages 18+</span>
+              </div>
+              <p class="os-desc mt-4 text-brand-muted text-[16px] leading-[1.6]">A full-moon-themed retreat focused on self-reflection, spiritual connection, and rituals rooted in Balinese tradition.</p>
+              <p class="os-price mt-auto pt-5 text-[16px] text-brand-text" data-idr="9104000" data-aud="714" data-usd="501" data-jpy="78971" data-cny="3351" data-eur="449" data-sgd="643">From <b class="font-bold">IDR 9.104.000</b> <span class="text-[13px] text-brand-muted">(714 AUD)</span></p>
+            </div>
+          </a>
+
+          <!-- Card 5: Bali Journey -->
+          <a href="retreat.html" class="os-card group shrink-0 snap-start">
+            <div class="os-imgwrap">
+              <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80" alt="Bali Journey" loading="lazy">
+              <span class="os-sale">🔥 On sale</span>
+            </div>
+            <div class="os-body">
+              <div class="flex flex-wrap gap-2">
+                <span class="os-tag"><span aria-hidden="true">🙏</span>Spiritual</span>
+                <span class="os-tag"><span aria-hidden="true">🎒</span>Day trip</span>
+              </div>
+              <h3 class="os-name mt-4 text-[26px] font-semibold text-brand-text tracking-[-0.02em] leading-[1.15]">Bali Journey</h3>
+              <div class="os-meta">
+                <span>🗓️ 1 Day</span>
+                <span><svg class="pin-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg>West Bali</span>
+                <span>👥 Ages 18+</span>
+              </div>
+              <p class="os-desc mt-4 text-brand-muted text-[16px] leading-[1.6]">A spiritual journey visiting temples in West Bali, with a self-purification experience.</p>
+              <p class="os-price mt-auto pt-5 text-[16px] text-brand-text" data-idr="4552000" data-aud="357" data-usd="250" data-jpy="39486" data-cny="1676" data-eur="224" data-sgd="321">From <b class="font-bold">IDR 4.552.000</b> <span class="text-[13px] text-brand-muted">(357 AUD)</span></p>
+            </div>
+          </a>
+
+          <!-- Card 6: Mother Temple Pilgrimage -->
+          <a href="retreat.html" class="os-card group shrink-0 snap-start">
+            <div class="os-imgwrap">
+              <img src="https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?auto=format&fit=crop&w=900&q=80" alt="Mother Temple Pilgrimage" loading="lazy">
+              <span class="os-sale">🔥 On sale</span>
+            </div>
+            <div class="os-body">
+              <div class="flex flex-wrap gap-2">
+                <span class="os-tag"><span aria-hidden="true">🙏</span>Spiritual</span>
+                <span class="os-tag"><span aria-hidden="true">🏛️</span>Culture</span>
+              </div>
+              <h3 class="os-name mt-4 text-[26px] font-semibold text-brand-text tracking-[-0.02em] leading-[1.15]">Mother Temple Pilgrimage</h3>
+              <div class="os-meta">
+                <span>🗓️ 1 Day</span>
+                <span><svg class="pin-ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/></svg>Besakih, East Bali</span>
+                <span>👥 Ages 18+</span>
+              </div>
+              <p class="os-desc mt-4 text-brand-muted text-[16px] leading-[1.6]">A journey to Pura Besakih, the Mother Temple of Bali, with a spiritual experience and self-purification ritual.</p>
+              <p class="os-price mt-auto pt-5 text-[16px] text-brand-text" data-idr="4552000" data-aud="357" data-usd="250" data-jpy="39486" data-cny="1676" data-eur="224" data-sgd="321">From <b class="font-bold">IDR 4.552.000</b> <span class="text-[13px] text-brand-muted">(357 AUD)</span></p>
+            </div>
+          </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="travellers" class="relative bg-white px-[6%] pt-24 pb-14 md:px-4 md:py-20">
+    <div class="tv-inner relative mx-auto max-w-[1499px]">
+      <svg class="tv-cat absolute -right-4 -top-[93px] w-[62px] h-[96px] md:right-4 md:-top-20 md:w-[52px] md:h-[80px] pointer-events-none xl:right-auto" viewBox="0 0 90 140" fill="none" stroke="#F9A045" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 24L20 6l17 9"></path><path d="M68 24l2-18-17 9"></path>
+        <ellipse cx="45" cy="34" rx="25" ry="21"></ellipse>
+        <path d="M32 33q4 4 8 0M50 33q4 4 8 0M43 41h4M45 41v3q-3 3-6 1M45 44q3 3 6 1"></path>
+        <path d="M24 60C14 76 14 104 22 124c4 10 14 14 24 14s22-4 26-14c6-16 4-42-6-62"></path>
+        <path d="M30 64c-14-8-20-26-12-38 5-6 12-2 11 6"></path>
+        <path d="M30 62q15 10 30 0"></path><circle cx="45" cy="72" r="3.2"></circle>
+        <path d="M60 100q10 6 8 18"></path>
+      </svg>
+      <div class="text-center">
+        <h2 class="tv-title text-[34px] sm:text-[44px] font-extrabold text-brand-text tracking-[-0.04em] leading-tight">What our travellers say</h2>
+        <p class="tv-sub mt-4 mx-auto max-w-[760px] text-brand-muted text-[16px] leading-[1.6] tracking-[-0.01em]">Hear from the people who have explored Bali with Soulvana, in their own words.</p>
+      </div>
+      <div class="tv-grid mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-[25px]">
+        <article class="tv-card bg-white rounded-[24px] p-6 md:p-[30px] flex flex-col">
+          <div class="flex items-center gap-2" aria-label="5 out of 5 stars"><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg></div>
+          <p class="tv-text mt-4 text-brand-text text-[16px] leading-[1.65]">[Placeholder] Replace this with a real review from one of your guests. Two to four lines reads best.</p>
+          
+          <div class="mt-auto pt-5 flex items-center gap-3.5">
+            <span class="tv-avatar shrink-0 w-[50px] h-[50px] rounded-full bg-[#F9A045] flex items-center justify-center text-white" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>
+            <div>
+              <p class="tv-name font-bold text-brand-text text-[17px] leading-tight">Guest name</p>
+              <p class="tv-meta text-brand-muted text-[14px] mt-0.5">Trip name &middot; Month 2026</p>
+            </div>
+          </div>
+        </article>
+        <article class="tv-card bg-white rounded-[24px] p-6 md:p-[30px] flex flex-col">
+          <div class="flex items-center gap-2" aria-label="5 out of 5 stars"><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg></div>
+          <p class="tv-text tv-clamp mt-4 text-brand-text text-[16px] leading-[1.65]">[Placeholder] Replace this with a real review from one of your guests. Copy their words exactly and use their name only with their permission. Longer reviews are cut after a few lines, and this button lets visitors read the rest of it.</p>
+          <button type="button" class="tv-more mt-0.5 font-bold text-brand-text text-[15px]">See more</button>
+          <div class="mt-auto pt-5 flex items-center gap-3.5">
+            <span class="tv-avatar shrink-0 w-[50px] h-[50px] rounded-full bg-[#F9A045] flex items-center justify-center text-white" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>
+            <div>
+              <p class="tv-name font-bold text-brand-text text-[17px] leading-tight">Guest name</p>
+              <p class="tv-meta text-brand-muted text-[14px] mt-0.5">Trip name &middot; Month 2026</p>
+            </div>
+          </div>
+        </article>
+        <article class="tv-card bg-white rounded-[24px] p-6 md:p-[30px] flex flex-col">
+          <div class="flex items-center gap-2" aria-label="5 out of 5 stars"><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg></div>
+          <p class="tv-text tv-clamp mt-4 text-brand-text text-[16px] leading-[1.65]">[Placeholder] Replace this with a real review from one of your guests. Copy their words exactly and use their name only with their permission. Longer reviews are cut after a few lines, and this button lets visitors read the rest of it.</p>
+          <button type="button" class="tv-more mt-0.5 font-bold text-brand-text text-[15px]">See more</button>
+          <div class="mt-auto pt-5 flex items-center gap-3.5">
+            <span class="tv-avatar shrink-0 w-[50px] h-[50px] rounded-full bg-[#F9A045] flex items-center justify-center text-white" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>
+            <div>
+              <p class="tv-name font-bold text-brand-text text-[17px] leading-tight">Guest name</p>
+              <p class="tv-meta text-brand-muted text-[14px] mt-0.5">Trip name &middot; Month 2026</p>
+            </div>
+          </div>
+        </article>
+        <article class="tv-card bg-white rounded-[24px] p-6 md:p-[30px] flex flex-col">
+          <div class="flex items-center gap-2" aria-label="5 out of 5 stars"><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg></div>
+          <p class="tv-text mt-4 text-brand-text text-[16px] leading-[1.65]">[Placeholder] Replace this with a real review from one of your guests. Copy their words exactly and use their name only with their permission.</p>
+          
+          <div class="mt-auto pt-5 flex items-center gap-3.5">
+            <span class="tv-avatar shrink-0 w-[50px] h-[50px] rounded-full bg-[#F9A045] flex items-center justify-center text-white" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>
+            <div>
+              <p class="tv-name font-bold text-brand-text text-[17px] leading-tight">Guest name</p>
+              <p class="tv-meta text-brand-muted text-[14px] mt-0.5">Trip name &middot; Month 2026</p>
+            </div>
+          </div>
+        </article>
+        <article class="tv-card bg-white rounded-[24px] p-6 md:p-[30px] flex flex-col">
+          <div class="flex items-center gap-2" aria-label="5 out of 5 stars"><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg></div>
+          <p class="tv-text mt-4 text-brand-text text-[16px] leading-[1.65]">[Placeholder] Replace this with a real review from one of your guests.</p>
+          
+          <div class="mt-auto pt-5 flex items-center gap-3.5">
+            <span class="tv-avatar shrink-0 w-[50px] h-[50px] rounded-full bg-[#F9A045] flex items-center justify-center text-white" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>
+            <div>
+              <p class="tv-name font-bold text-brand-text text-[17px] leading-tight">Guest name</p>
+              <p class="tv-meta text-brand-muted text-[14px] mt-0.5">Trip name &middot; Month 2026</p>
+            </div>
+          </div>
+        </article>
+        <article class="tv-card bg-white rounded-[24px] p-6 md:p-[30px] flex flex-col">
+          <div class="flex items-center gap-2" aria-label="5 out of 5 stars"><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg><svg class="tv-star w-[18px] h-[18px]" viewBox="0 0 24 24" fill="#FFD9A8" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8L12 2.5z"/></svg></div>
+          <p class="tv-text tv-clamp mt-4 text-brand-text text-[16px] leading-[1.65]">[Placeholder] Replace this with a real review from one of your guests. Copy their words exactly and use their name only with their permission. Longer reviews are cut after a few lines, and this button lets visitors read the rest of it.</p>
+          <button type="button" class="tv-more mt-0.5 font-bold text-brand-text text-[15px]">See more</button>
+          <div class="mt-auto pt-5 flex items-center gap-3.5">
+            <span class="tv-avatar shrink-0 w-[50px] h-[50px] rounded-full bg-[#F9A045] flex items-center justify-center text-white" aria-hidden="true"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>
+            <div>
+              <p class="tv-name font-bold text-brand-text text-[17px] leading-tight">Guest name</p>
+              <p class="tv-meta text-brand-muted text-[14px] mt-0.5">Trip name &middot; Month 2026</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="mt-12 xl:mt-0 text-center tv-readmore">
+        <a href="#contact" class="tv-readbtn inline-flex items-center justify-center bg-brand-text hover:bg-[#2D2680] text-white font-bold text-[17px] h-[52px] px-8 rounded-full transition-colors">Read more reviews</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="faq" class="py-20 md:py-28 bg-white px-6 md:px-12">
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      
+      <!-- Left Column: Sticky Title, Description & Action Buttons -->
+      <div class="lg:col-span-5 lg:sticky lg:top-28 text-left">
+        <h2 class="text-[38px] sm:text-[50px] font-extrabold text-brand-text tracking-[-0.03em] leading-[1.12]">
+          Before You Begin Your<br>Journey
+        </h2>
+        <p class="mt-5 text-[16px] sm:text-[17px] text-brand-muted leading-[1.65] max-w-[420px]">
+          Every journey comes with questions. Find the answers you need to feel prepared, travel with confidence, and make the most of your Soulvana experience.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="mt-8 flex items-center gap-6">
+          <a href="#faq" class="inline-flex items-center justify-center bg-brand-text hover:bg-[#2D2680] text-white font-bold text-[16px] h-[50px] px-8 rounded-full transition-colors">
+            See all FAQs
+          </a>
+          <a href="#contact" class="inline-flex items-center text-[16px] font-semibold text-brand-text border-b border-dotted border-brand-text hover:text-brand-coral hover:border-brand-coral transition-colors py-0.5">
+            Chat with us
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Clean Categorized Accordion List -->
+      <div class="lg:col-span-7 space-y-10 sm:space-y-12">
+
+        <!-- 1. Finding Your Journey -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-[19px] sm:text-[21px] font-bold text-brand-text">
+            <span class="w-[38px] h-[38px] rounded-full bg-white flex items-center justify-center text-[#1B1648] shadow-sm shrink-0">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m16.2 7.8-2.1 6.3-6.3 2.1 2.1-6.3z"/>
+              </svg>
+            </span>
+            <span>Finding Your Journey</span>
+          </div>
+
+          <div class="space-y-3.5 pl-1">
+            <details class="group cursor-pointer [&_summary::-webkit-details-marker]:none" name="faq">
+              <summary class="flex items-center gap-3.5 text-[17px] sm:text-[18px] text-brand-text font-normal list-none select-none hover:text-brand-coral transition-colors py-1">
+                <span class="w-[26px] h-[26px] rounded-full border border-[#F9A045] flex items-center justify-center text-[#F9A045] shrink-0 transition-transform duration-200 group-open:rotate-45">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span>How do I choose the right Soulvana experience?</span>
+              </summary>
+              <div class="pl-10 pr-4 mt-2 text-[15px] sm:text-[16px] text-brand-muted leading-[1.65]">
+                Start by considering how much time you have and the kind of experience you are looking for. Our retreats focus on reflection, wellbeing, and meaningful cultural encounters, while our adventure programs offer opportunities to explore Bali's landscapes, villages, and local traditions. Each experience has its own itinerary and inclusions.
+              </div>
+            </details>
+
+            <details class="group cursor-pointer [&_summary::-webkit-details-marker]:none" name="faq">
+              <summary class="flex items-center gap-3.5 text-[17px] sm:text-[18px] text-brand-text font-normal list-none select-none hover:text-brand-coral transition-colors py-1">
+                <span class="w-[26px] h-[26px] rounded-full border border-[#F9A045] flex items-center justify-center text-[#F9A045] shrink-0 transition-transform duration-200 group-open:rotate-45">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span>Can I join Soulvana on my own?</span>
+              </summary>
+              <div class="pl-10 pr-4 mt-2 text-[15px] sm:text-[16px] text-brand-muted leading-[1.65]">
+                Yes, solo travellers are welcome to enquire about our experiences. Whether you are travelling alone, with a partner, or with friends, we can help you understand the arrangements for your chosen program, including accommodation and group format.
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- 2. Reserving Your Place -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-[19px] sm:text-[21px] font-bold text-brand-text">
+            <span class="w-[38px] h-[38px] rounded-full bg-white flex items-center justify-center text-[#1B1648] shadow-sm shrink-0">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <path d="M16 2v4M8 2v4M3 10h18m-11 5 2 2 4-4"/>
+              </svg>
+            </span>
+            <span>Reserving Your Place</span>
+          </div>
+
+          <div class="space-y-3.5 pl-1">
+            <details class="group cursor-pointer [&_summary::-webkit-details-marker]:none" name="faq">
+              <summary class="flex items-center gap-3.5 text-[17px] sm:text-[18px] text-brand-text font-normal list-none select-none hover:text-brand-coral transition-colors py-1">
+                <span class="w-[26px] h-[26px] rounded-full border border-[#F9A045] flex items-center justify-center text-[#F9A045] shrink-0 transition-transform duration-200 group-open:rotate-45">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span>What is included in the price?</span>
+              </summary>
+              <div class="pl-10 pr-4 mt-2 text-[15px] sm:text-[16px] text-brand-muted leading-[1.65]">
+                Inclusions vary by experience. Depending on your selected program, the package may include accommodation, meals, ground transportation, entrance fees, guided activities, and cultural experiences. Please check the individual program page for the exact inclusions before booking.
+              </div>
+            </details>
+
+            <details class="group cursor-pointer [&_summary::-webkit-details-marker]:none" name="faq">
+              <summary class="flex items-center gap-3.5 text-[17px] sm:text-[18px] text-brand-text font-normal list-none select-none hover:text-brand-coral transition-colors py-1">
+                <span class="w-[26px] h-[26px] rounded-full border border-[#F9A045] flex items-center justify-center text-[#F9A045] shrink-0 transition-transform duration-200 group-open:rotate-45">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span>How do I reserve my place?</span>
+              </summary>
+              <div class="pl-10 pr-4 mt-2 text-[15px] sm:text-[16px] text-brand-muted leading-[1.65]">
+                Contact the Soulvana team with your preferred experience and travel dates. We will confirm availability, provide the relevant package details, and explain the payment and booking process before your reservation is finalised.
+              </div>
+            </details>
+
+            <details class="group cursor-pointer [&_summary::-webkit-details-marker]:none" name="faq">
+              <summary class="flex items-center gap-3.5 text-[17px] sm:text-[18px] text-brand-text font-normal list-none select-none hover:text-brand-coral transition-colors py-1">
+                <span class="w-[26px] h-[26px] rounded-full border border-[#F9A045] flex items-center justify-center text-[#F9A045] shrink-0 transition-transform duration-200 group-open:rotate-45">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span>Can I request a private or customised experience?</span>
+              </summary>
+              <div class="pl-10 pr-4 mt-2 text-[15px] sm:text-[16px] text-brand-muted leading-[1.65]">
+                If you prefer a more personal journey, contact us with your group size, preferred dates, and interests. We can discuss the available options and whether adjustments to the itinerary are possible.
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- 3. Travel Gently, Feel Cared For -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-[19px] sm:text-[21px] font-bold text-brand-text">
+            <span class="w-[38px] h-[38px] rounded-full bg-white flex items-center justify-center text-[#1B1648] shadow-sm shrink-0">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+            </span>
+            <span>Travel Gently, Feel Cared For</span>
+          </div>
+
+          <div class="space-y-3.5 pl-1">
+            <details class="group cursor-pointer [&_summary::-webkit-details-marker]:none" name="faq">
+              <summary class="flex items-center gap-3.5 text-[17px] sm:text-[18px] text-brand-text font-normal list-none select-none hover:text-brand-coral transition-colors py-1">
+                <span class="w-[26px] h-[26px] rounded-full border border-[#F9A045] flex items-center justify-center text-[#F9A045] shrink-0 transition-transform duration-200 group-open:rotate-45">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span>Do I need to be physically fit to participate?</span>
+              </summary>
+              <div class="pl-10 pr-4 mt-2 text-[15px] sm:text-[16px] text-brand-muted leading-[1.65]">
+                The level of physical activity depends on your chosen experience. Some programs involve walking, outdoor exploration, or time in natural settings. Review the itinerary and let our team know about any accessibility needs or concerns before booking.
+              </div>
+            </details>
+
+            <details class="group cursor-pointer [&_summary::-webkit-details-marker]:none" name="faq">
+              <summary class="flex items-center gap-3.5 text-[17px] sm:text-[18px] text-brand-text font-normal list-none select-none hover:text-brand-coral transition-colors py-1">
+                <span class="w-[26px] h-[26px] rounded-full border border-[#F9A045] flex items-center justify-center text-[#F9A045] shrink-0 transition-transform duration-200 group-open:rotate-45">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span>What happens if the weather affects an activity?</span>
+              </summary>
+              <div class="pl-10 pr-4 mt-2 text-[15px] sm:text-[16px] text-brand-muted leading-[1.65]">
+                Outdoor activities depend on local weather and safety conditions. If an activity cannot proceed safely, the team will assess the available alternatives or adjustments to the schedule. Any changes will depend on the activity and conditions at the time.
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- 4. Preparing for Bali -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-[19px] sm:text-[21px] font-bold text-brand-text">
+            <span class="w-[38px] h-[38px] rounded-full bg-white flex items-center justify-center text-[#1B1648] shadow-sm shrink-0">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22V10"/>
+                <path d="M12 10c0-4 3-6 7-6 0 4-3 6-7 6Z"/>
+                <path d="M12 14c0-3-2.5-5-6-5 0 3 2.5 5 6 5Z"/>
+              </svg>
+            </span>
+            <span>Preparing for Bali</span>
+          </div>
+
+          <div class="space-y-3.5 pl-1">
+            <details class="group cursor-pointer [&_summary::-webkit-details-marker]:none" name="faq">
+              <summary class="flex items-center gap-3.5 text-[17px] sm:text-[18px] text-brand-text font-normal list-none select-none hover:text-brand-coral transition-colors py-1">
+                <span class="w-[26px] h-[26px] rounded-full border border-[#F9A045] flex items-center justify-center text-[#F9A045] shrink-0 transition-transform duration-200 group-open:rotate-45">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span>What should I bring with me?</span>
+              </summary>
+              <div class="pl-10 pr-4 mt-2 text-[15px] sm:text-[16px] text-brand-muted leading-[1.65]">
+                Your packing list depends on your itinerary. Comfortable clothing, suitable footwear, sun protection, personal toiletries, and any necessary medication are useful starting points. We will advise you of any additional items required for your selected activities before departure.
+              </div>
+            </details>
+
+            <details class="group cursor-pointer [&_summary::-webkit-details-marker]:none" name="faq">
+              <summary class="flex items-center gap-3.5 text-[17px] sm:text-[18px] text-brand-text font-normal list-none select-none hover:text-brand-coral transition-colors py-1">
+                <span class="w-[26px] h-[26px] rounded-full border border-[#F9A045] flex items-center justify-center text-[#F9A045] shrink-0 transition-transform duration-200 group-open:rotate-45">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span>Do I need travel insurance?</span>
+              </summary>
+              <div class="pl-10 pr-4 mt-2 text-[15px] sm:text-[16px] text-brand-muted leading-[1.65]">
+                We recommend arranging suitable travel insurance before your trip. Check that your policy covers the activities you plan to undertake, along with relevant medical expenses, cancellations, and other travel risks.
+              </div>
+            </details>
+
+            <details class="group cursor-pointer [&_summary::-webkit-details-marker]:none" name="faq">
+              <summary class="flex items-center gap-3.5 text-[17px] sm:text-[18px] text-brand-text font-normal list-none select-none hover:text-brand-coral transition-colors py-1">
+                <span class="w-[26px] h-[26px] rounded-full border border-[#F9A045] flex items-center justify-center text-[#F9A045] shrink-0 transition-transform duration-200 group-open:rotate-45">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+                <span>Can Soulvana accommodate dietary requirements?</span>
+              </summary>
+              <div class="pl-10 pr-4 mt-2 text-[15px] sm:text-[16px] text-brand-muted leading-[1.65]">
+                Please inform us of any dietary requirements or food allergies when enquiring or booking. We will discuss what can be accommodated for your selected program and confirm arrangements in advance.
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEWSLETTER + FOOTER
+       ========================================================================= -->
+  <section id="newsletter" class="relative mx-2 md:mx-1 mt-10 rounded-t-[40px] md:rounded-t-[110px] overflow-hidden px-3 md:px-8 pt-14 md:pt-24 pb-4">
+    <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=75" aria-hidden="true" tabindex="-1">
+      <source src="hh.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-[#F9A045]/55"></div>
+
+    <div class="relative mx-auto max-w-[1500px] grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
+      <div class="relative bg-white rounded-[32px] md:rounded-[44px] px-6 py-9 md:px-[70px] md:py-[70px]">
+        <svg class="hidden lg:block absolute -right-8 -top-10 w-[90px] h-[110px] z-10 pointer-events-none" viewBox="0 0 90 110" fill="#fff" stroke="#F9A045" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 58h46l-6 40a8 8 0 0 1-8 7H36a8 8 0 0 1-8-7z"/><path d="M45 58V22M45 28c-8-10-20-8-26-2M45 28c8-10 20-8 26-2M45 36c-10-2-18 4-20 10M45 36c10-2 18 4 20 10"/></svg>
+        <h2 class="text-[34px] md:text-[56px] font-extrabold text-brand-text tracking-[-0.04em] leading-[1.05]">Join the Soulvana family!</h2>
+        <p class="mt-5 text-brand-muted text-[16px] md:text-[19px] leading-[1.6]">Want more Bali stories in your inbox? Join our mailing list for news, special offers, travel tips and hidden gems.</p>
+
+        <form id="nl-form" class="mt-8" novalidate>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input type="email" name="email" required placeholder="Enter your email" aria-label="Email" class="h-[56px] rounded-full bg-white px-6 text-[17px] text-brand-text placeholder:text-brand-text/70 outline-none focus:ring-2 focus:ring-[#F9A045]">
+            <input type="tel" name="phone" placeholder="+62 000000000" aria-label="Phone number" class="h-[56px] rounded-full bg-white px-6 text-[17px] text-brand-text placeholder:text-brand-text/70 outline-none focus:ring-2 focus:ring-[#F9A045]">
+          </div>
+          <label class="mt-5 flex items-center gap-3 text-[15px] text-brand-text cursor-pointer">
+            <input type="checkbox" name="consent" required class="w-5 h-5 shrink-0 rounded border border-[#F9A045] accent-[#1B1648]">
+            <span>By checking this box you agree to the Soulvana <a href="#" class="underline underline-offset-2 hover:text-brand-coral">Privacy Policy</a></span>
+          </label>
+          <button type="submit" class="mt-7 w-full h-[56px] rounded-full bg-brand-text hover:bg-[#2D2680] text-white font-bold text-[17px] inline-flex items-center justify-center gap-2 transition-colors">
+            Subscribe now
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p id="nl-msg" class="mt-4 text-[15px] min-h-[22px]" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="relative rounded-[32px] md:rounded-[44px] overflow-hidden min-h-[320px] lg:min-h-0">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1400&q=80" alt="Rice terraces in Bali" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <span class="absolute left-4 bottom-4 inline-flex items-center gap-1.5 bg-white rounded-full px-4 py-2 text-[15px] text-brand-text font-medium">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .04a10 10 0 0 0-9.98 9.98c0 2.57 1.99 6.59 5.91 11.95a5.03 5.03 0 0 0 8.13 0c3.93-5.36 5.92-9.38 5.92-11.95A10 10 0 0 0 12 .04zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>Bali, Indonesia
+        </span>
+      </div>
+    </div>
+
+    <footer id="contact" class="relative mx-auto mt-16 md:mt-24 max-w-[1850px] rounded-[32px] md:rounded-[44px] bg-[#4A4573] text-white px-6 md:px-[90px] pt-12 md:pt-[84px] pb-8 md:pb-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+        <div class="lg:col-span-6">
+          <a href="homepage.html" class="inline-flex w-[110px] h-[110px] rounded-full bg-white items-center justify-center shadow-lg" aria-label="Soulvana Bali home"><img src="logo.webp" alt="Soulvana Bali" class="w-[86%] h-[86%] object-contain"></a>
+          <p class="mt-8 max-w-[640px] text-[17px] md:text-[19px] leading-[1.6] text-white/80">Welcome to Soulvana. Different ways to experience Bali, from mindful restorative retreats to wild natural adventures, crafted in harmony with Bali&rsquo;s nature and communities.</p>
+          <div class="mt-7 flex items-center gap-6"><a href="#" aria-label="Instagram" class="text-white hover:text-[#FFD9A8] transition-colors"><svg viewBox="0 0 24 24" class="w-[22px] h-[22px]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a><a href="#" aria-label="TikTok" class="text-white hover:text-[#FFD9A8] transition-colors"><svg viewBox="0 0 24 24" class="w-[22px] h-[22px]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a><a href="#" aria-label="Facebook" class="text-white hover:text-[#FFD9A8] transition-colors"><svg viewBox="0 0 24 24" class="w-[22px] h-[22px]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" aria-label="YouTube" class="text-white hover:text-[#FFD9A8] transition-colors"><svg viewBox="0 0 24 24" class="w-[22px] h-[22px]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.5 6.4a2.8 2.8 0 0 0-1.9-2C18.9 4 12 4 12 4s-6.9 0-8.6.5a2.8 2.8 0 0 0-1.9 2A29 29 0 0 0 1 11.8a29 29 0 0 0 .5 5.3 2.8 2.8 0 0 0 1.9 2c1.7.5 8.6.5 8.6.5s6.900 0 8.600-.5a2.800 2.800 0 0 0 1.900-2 29 29 0 0 0 .5-5.300 29 29 0 0 0-.5-5.400z"/><path d="M9.750 15 15.500 11.750 9.750 8.500z"/></svg></a></div>
+          <p class="mt-8 text-[15px] text-white/70">Bali, Indonesia &middot; <a href="mailto:hello@soulvana.com" class="font-semibold text-white hover:text-[#FFD9A8] transition-colors">hello@soulvana.com</a></p>
+        </div>
+        <div class="lg:col-span-6 grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10 lg:pl-10"><div><h4 class="text-[15px] text-white/70">Travel with us</h4><ul class="mt-5 space-y-3.5 text-[17px] font-semibold text-white"><li><a href="retreat.html" class="hover:text-[#FFD9A8] transition-colors">Retreat</a></li><li><a href="ad.html" class="hover:text-[#FFD9A8] transition-colors">Adventure</a></li><li><a href="homepage.html#on-sale" class="hover:text-[#FFD9A8] transition-colors">Special offer</a></li><li><a href="#contact" class="hover:text-[#FFD9A8] transition-colors">Manage my booking</a></li></ul></div><div><h4 class="text-[15px] text-white/70">About us</h4><ul class="mt-5 space-y-3.5 text-[17px] font-semibold text-white"><li><a href="#why-travel" class="hover:text-[#FFD9A8] transition-colors">Why Soulvana</a></li><li><a href="homepage.html#story" class="hover:text-[#FFD9A8] transition-colors">Our Story</a></li><li><a href="homepage.html#gallery" class="hover:text-[#FFD9A8] transition-colors">Gallery</a></li><li><a href="#travellers" class="hover:text-[#FFD9A8] transition-colors">Reviews</a></li><li><a href="#contact" class="hover:text-[#FFD9A8] transition-colors">Work with us</a></li></ul></div><div><h4 class="text-[15px] text-white/70">Support</h4><ul class="mt-5 space-y-3.5 text-[17px] font-semibold text-white"><li><a href="faq.html" class="hover:text-[#FFD9A8] transition-colors">FAQs</a></li><li><a href="#contact" class="hover:text-[#FFD9A8] transition-colors">Contact us</a></li><li><a href="#contact" class="hover:text-[#FFD9A8] transition-colors">Travel insurance</a></li><li><a href="#difference" class="hover:text-[#FFD9A8] transition-colors">Book with confidence</a></li></ul></div></div>
+      </div>
+
+      <div class="mt-12 md:mt-16 pt-6 border-t border-white/25 flex flex-col sm:flex-row items-center justify-between gap-4 text-[15px] md:text-[17px]">
+        <p class="text-white/90">&copy; 2026 Soulvana. All rights reserved.</p>
+        <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 font-semibold">
+          <a href="#" class="hover:text-[#FFD9A8] transition-colors">Terms of Experience</a>
+          <a href="#" class="hover:text-[#FFD9A8] transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-[#FFD9A8] transition-colors">Responsible Travel Ethics</a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- =========================================================================
+       VANILLA JAVASCRIPT: INTERACTION & ACCESSIBILITY LOGIC
+       ========================================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Navbar becomes fixed after scrolling past the hero top
+      const navbarContainer = document.getElementById('navbar-container');
+      let menuOpen = false;
+
+      // Navbar is fixed after scrolling, and always while the mobile menu is open
+      const updateNav = () => {
+        const fixed = menuOpen || window.scrollY > 120;
+        navbarContainer.classList.toggle('absolute', !fixed);
+        navbarContainer.classList.toggle('md:top-10', !fixed);
+        navbarContainer.classList.toggle('top-[29px]', !fixed);
+        navbarContainer.classList.toggle('fixed', fixed);
+        navbarContainer.classList.toggle('top-3', fixed);
+      };
+      window.addEventListener('scroll', updateNav, { passive: true });
+
+      // 2. Mobile menu (main view + About us / Before you go / Currency sub-views)
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (mobileBtn && mobileMenu) {
+        const views = mobileMenu.querySelectorAll('[data-mm-view]');
+        const scroller = mobileMenu.querySelector('.mm-scroll');
+        const showView = (name) => {
+          views.forEach(v => { v.hidden = v.dataset.mmView !== name; });
+          if (scroller) scroller.scrollTop = 0;
+        };
+        const setMenu = (open) => {
+          menuOpen = open;
+          mobileMenu.classList.toggle('hidden', !open);
+          mobileBtn.setAttribute('aria-expanded', String(open));
+          hamburgerIcon.classList.toggle('hidden', open);
+          closeIcon.classList.toggle('hidden', !open);
+          document.body.classList.toggle('menu-open', open);
+          if (open) showView('main');
+          updateNav();
+        };
+
+        mobileBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+        mobileMenu.querySelectorAll('[data-mm-open]').forEach(b => b.addEventListener('click', () => showView(b.dataset.mmOpen)));
+        mobileMenu.querySelectorAll('[data-mm-back]').forEach(b => b.addEventListener('click', () => showView('main')));
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menuOpen) setMenu(false); });
+        window.matchMedia('(min-width: 1280px)').addEventListener('change', (e) => { if (e.matches && menuOpen) setMenu(false); });
+
+        // Currency list: reuse the desktop options (same flags), keep both in sync
+        const curList = document.getElementById('mm-cur-list');
+        const curLabel = document.getElementById('mm-cur-label');
+        const curFlag = document.getElementById('mm-cur-flag');
+        const deskOpts = document.querySelectorAll('.nv-sel .nv-opt');
+        if (curList && deskOpts.length) {
+          deskOpts.forEach(o => {
+            const c = o.cloneNode(true);
+            c.addEventListener('click', () => {
+              if (window.setCurrency) window.setCurrency(c.dataset.value);
+              showView('main');
+            });
+            curList.appendChild(c);
+          });
+        }
+      }
+
+      // 3. Hero search: scroll to experiences and filter cards by typed keyword
+      const searchForm = document.getElementById('hero-search-form');
+      const searchInput = document.getElementById('hero-search-input');
+      const navSearchBtn = document.getElementById('nav-search-btn');
+      const experienceCards = document.querySelectorAll('.experience-card');
+
+      const runSearch = () => {
+        const q = (searchInput.value || '').trim().toLowerCase();
+        experienceCards.forEach(card => {
+          card.style.display = (!q || card.textContent.toLowerCase().includes(q)) ? 'flex' : 'none';
+        });
+        const el = document.getElementById('experiences');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      };
+
+      if (searchForm) {
+        searchForm.addEventListener('submit', (e) => { e.preventDefault(); runSearch(); });
+      }
+      if (navSearchBtn && searchInput) {
+        navSearchBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          searchInput.focus();
+        });
+      }
+
+      // Trip styles carousel
+      const tpTrack = document.getElementById('tp-track');
+      const tpPrev = document.getElementById('tp-prev');
+      const tpNext = document.getElementById('tp-next');
+      const tpFill = document.getElementById('tp-fill');
+      if (tpTrack) {
+        const step = () => {
+          const card = tpTrack.querySelector('.tp-card');
+          const gap = parseFloat(getComputedStyle(tpTrack).columnGap) || 0;
+          return card ? card.getBoundingClientRect().width + gap : 300;
+        };
+        const updateProgress = () => {
+          if (!tpFill) return;
+          const pct = Math.min(100, ((tpTrack.scrollLeft + tpTrack.clientWidth) / tpTrack.scrollWidth) * 100);
+          tpFill.style.width = pct + '%';
+        };
+        tpPrev && tpPrev.addEventListener('click', () => tpTrack.scrollBy({ left: -step(), behavior: 'smooth' }));
+        tpNext && tpNext.addEventListener('click', () => tpTrack.scrollBy({ left: step(), behavior: 'smooth' }));
+        tpTrack.addEventListener('scroll', updateProgress, { passive: true });
+        window.addEventListener('resize', updateProgress);
+        updateProgress();
+      }
+
+      // On Sale carousel
+      const osTrack = document.getElementById('os-track');
+      if (osTrack) {
+        const osFill = document.getElementById('os-fill');
+        const osStep = () => {
+          const c = osTrack.querySelector('.os-card');
+          const gap = parseFloat(getComputedStyle(osTrack).columnGap) || 0;
+          return c ? c.getBoundingClientRect().width + gap : 300;
+        };
+        const osProgress = () => {
+          if (osFill) osFill.style.width = Math.min(100, ((osTrack.scrollLeft + osTrack.clientWidth) / osTrack.scrollWidth) * 100) + '%';
+        };
+        const op = document.getElementById('os-prev'), on = document.getElementById('os-next');
+        op && op.addEventListener('click', () => osTrack.scrollBy({ left: -osStep(), behavior: 'smooth' }));
+        on && on.addEventListener('click', () => osTrack.scrollBy({ left: osStep(), behavior: 'smooth' }));
+        osTrack.addEventListener('scroll', osProgress, { passive: true });
+        window.addEventListener('resize', osProgress);
+        osProgress();
+      }
+
+      // Traveller reviews: See more toggle
+      document.querySelectorAll('#travellers .tv-more').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const text = btn.previousElementSibling;
+          const open = text.classList.toggle('is-open');
+          btn.textContent = open ? 'See less' : 'See more';
+        });
+      });
+
+      // 4. Featured Experiences Category Filter
+      const filterBtns = document.querySelectorAll('.filter-btn');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-brand-navy', 'text-brand-text');
+            b.classList.add('text-brand-muted');
+          });
+          btn.classList.add('bg-brand-navy', 'text-brand-text');
+          btn.classList.remove('text-brand-muted');
+
+          experienceCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            card.style.display = (filter === 'all' || category === filter) ? 'flex' : 'none';
+          });
+        });
+      });
+    });
+  </script>
+  <script>
+    // Stacking cards: previous card shrinks slightly as the next one slides over it
+    (function () {
+      const cards = Array.from(document.querySelectorAll('[data-stack-card]'));
+      if (!cards.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      let ticking = false;
+      function update() {
+        cards.forEach((card, i) => {
+          const next = cards[i + 1];
+          if (!next) return;
+          const stickTop = parseFloat(getComputedStyle(card).top) || 0;
+          const nextTop = next.getBoundingClientRect().top;
+          const range = card.offsetHeight;
+          const p = Math.min(1, Math.max(0, (stickTop + range - nextTop) / range));
+          card.style.transform = 'scale(' + (1 - 0.05 * p).toFixed(4) + ')';
+        });
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
+  <script>
+    (function () {
+      const CUR_CONFIG = ['IDR','USD','EUR','AUD','SGD','JPY','CNY'];
+      let CUR = 'IDR';
+      try { CUR = localStorage.getItem('sv-cur') || localStorage.getItem('sv-currency') || 'IDR'; } catch(e) {}
+      if (CUR_CONFIG.indexOf(CUR) < 0) CUR = 'IDR';
+
+      window.setCurrency = function (val) {
+        if (CUR_CONFIG.indexOf(val) < 0) val = 'IDR';
+        CUR = val;
+        try {
+          localStorage.setItem('sv-cur', val);
+          localStorage.setItem('sv-currency', val);
+        } catch (e) {}
+
+        const deskOpt = document.querySelector('.nv-sel .nv-opt[data-value="' + val + '"] .nv-flag img');
+        const src = deskOpt ? deskOpt.src : '';
+
+        const curLabel = document.getElementById('mm-cur-label');
+        const curFlag = document.getElementById('mm-cur-flag');
+        if (curLabel) curLabel.textContent = val;
+        if (curFlag && src) curFlag.src = src;
+
+        document.querySelectorAll('.nv-opt').forEach(o => o.setAttribute('aria-selected', o.dataset.value === val ? 'true' : 'false'));
+        document.querySelectorAll('.nv-sel .nv-sel-label').forEach(l => { l.textContent = val; });
+        if (src) document.querySelectorAll('.nv-sel .nv-sel-btn .nv-flag img').forEach(i => { i.src = src; });
+      };
+    })();
+  </script>
+<script>
+(function () {
+  document.querySelectorAll('.nv-sel').forEach(function (sel) {
+    sel.querySelectorAll('.nv-opt').forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        if (window.setCurrency) window.setCurrency(opt.dataset.value);
+        if (document.activeElement) document.activeElement.blur();
+      });
+    });
+  });
+  let cur0 = 'IDR';
+  try { cur0 = localStorage.getItem('sv-cur') || localStorage.getItem('sv-currency') || 'IDR'; } catch(e) {}
+  if (window.setCurrency) window.setCurrency(cur0);
+})();
+</script>
+<script>
+// Newsletter form (front-end only: wire to your mailing service / backend)
+(function(){
+  var f=document.getElementById('nl-form'); if(!f) return;
+  var m=document.getElementById('nl-msg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=f.elements.email.value.trim();
+    var ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if(!ok){ m.textContent='Please enter a valid email address.'; m.style.color='#B42318'; return; }
+    if(!f.elements.consent.checked){ m.textContent='Please tick the box to agree to the Privacy Policy.'; m.style.color='#B42318'; return; }
+    m.textContent='Thank you! You are on the list.'; m.style.color='#1B1648'; f.reset();
+  });
+})();
+</script>
+</body>
+</html>
